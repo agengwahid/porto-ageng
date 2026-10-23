@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { label: "Ninjutsu Codex", href: "#skills", code: "SKILLS" },
-  { label: "Missions", href: "#projects", code: "PROJECTS" },
-  { label: "Shinobi Way", href: "#about", code: "CHRONICLES" },
-  { label: "Mastery Scrolls", href: "#certificates", code: "CERTS" },
-  { label: "Summon Kunai", href: "#contact", code: "CONTACT" },
+  { label: "Skills", href: "#skills", code: "CODEX" },
+  { label: "Projects", href: "#projects", code: "MISSIONS" },
+  { label: "Experience", href: "#about", code: "CHRONICLES" },
+  { label: "Certifications", href: "#certificates", code: "MASTERY" },
+  { label: "Contact", href: "#contact", code: "HIRE" },
 ];
 
 export default function Navbar() {
@@ -28,13 +28,20 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-[#090a0f]/90 backdrop-blur-md border-b border-[#262b3a] z-50 transition-colors">
-      {/* CHAKRA SCROLL PROGRESS INDICATOR (PRD Section 5) */}
-      <div className="absolute top-0 left-0 w-full h-[2px] bg-[#161922] overflow-hidden">
+    <header className="fixed top-0 left-0 w-full bg-[#090a0f]/95 backdrop-blur-md border-b border-[#232a3d] z-50 transition-colors">
+      {/* CHAKRA SCROLL PROGRESS BAR WITH GLOWING TRAVELING MARKER */}
+      <div className="absolute top-0 left-0 w-full h-[3px] bg-[#151926] overflow-visible">
         <div
-          className="h-full bg-gradient-to-r from-orange-500 via-amber-400 to-cyan-400 transition-all duration-75"
+          className="relative h-full bg-gradient-to-r from-orange-500 via-amber-400 to-cyan-400 transition-all duration-75"
           style={{ width: `${scrollProgress}%` }}
-        />
+        >
+          {/* Animated Glowing Kunai/Chakra Head at the Scroll Edge */}
+          {scrollProgress > 1 && (
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-3.5 h-3.5 rounded-full bg-orange-400 border border-white shadow-[0_0_10px_#f97316] flex items-center justify-center pointer-events-none">
+              <span className="w-1.5 h-1.5 rounded-full bg-zinc-950" />
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -42,9 +49,9 @@ export default function Navbar() {
         <a
           href="#"
           className="group flex items-center gap-3 text-zinc-100 font-semibold tracking-tight hover:text-orange-400 transition"
-          aria-label="Ageng Wahid Shinobi Portfolio"
+          aria-label="Ageng Wahid Portfolio Home"
         >
-          <span className="w-8 h-8 rounded-lg bg-[#161922] border border-orange-500/40 flex items-center justify-center font-mono text-xs text-orange-400 font-bold group-hover:border-orange-400 group-hover:bg-orange-950/30 transition shadow-[0_0_12px_rgba(249,115,22,0.15)]">
+          <span className="w-9 h-9 rounded-xl bg-[#151926] border border-orange-500/50 flex items-center justify-center font-mono text-xs text-orange-400 font-bold group-hover:border-orange-400 group-hover:bg-orange-950/40 transition shadow-[0_0_15px_rgba(249,115,22,0.18)]">
             AW
           </span>
           <div>
@@ -60,16 +67,16 @@ export default function Navbar() {
           </div>
         </a>
 
-        {/* DESKTOP HUD NAVIGATION */}
-        <nav className="hidden lg:flex items-center gap-1 font-mono" aria-label="Shinobi Navigation">
+        {/* DESKTOP HUD NAVIGATION (Clear for Recruiters, Stylish Shinobi Badges) */}
+        <nav className="hidden lg:flex items-center gap-1 font-mono" aria-label="Main Navigation">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="px-3 py-1.5 text-xs font-medium text-zinc-300 hover:text-orange-400 hover:bg-orange-950/20 rounded-md transition duration-150 flex items-center gap-1.5"
+              className="px-3.5 py-2 text-xs font-medium text-zinc-300 hover:text-orange-400 hover:bg-orange-950/20 rounded-lg transition duration-150 flex items-center gap-1.5"
             >
-              <span className="text-[10px] text-orange-500/80">/</span>
               <span>{link.label}</span>
+              <span className="text-[10px] text-orange-400/70 font-semibold">[{link.code}]</span>
             </a>
           ))}
         </nav>
@@ -82,7 +89,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 text-xs font-mono font-semibold tracking-wider text-orange-300 bg-orange-950/40 border border-orange-500/50 hover:bg-orange-500 hover:text-zinc-950 rounded-lg transition duration-200 shadow-[0_0_14px_rgba(249,115,22,0.15)]"
           >
-            <span>SUMMON RESUME</span>
+            <span>UNDUH RESUME</span>
             <span className="text-xs">📜</span>
           </a>
         </div>
@@ -90,8 +97,8 @@ export default function Navbar() {
         {/* MOBILE TOGGLE (Tap Target >= 44px) */}
         <button
           onClick={() => setOpen((prev) => !prev)}
-          className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg border border-[#262b3a] bg-[#161922] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition"
-          aria-label={open ? "Close Shinobi navigation" : "Open Shinobi navigation"}
+          className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg border border-[#232a3d] bg-[#151926] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition"
+          aria-label={open ? "Close navigation" : "Open navigation"}
           aria-expanded={open}
         >
           {open ? (
@@ -108,7 +115,7 @@ export default function Navbar() {
 
       {/* MOBILE HUD MENU FLYOUT */}
       {open && (
-        <div className="lg:hidden border-t border-[#262b3a] bg-[#0c0d13] px-6 py-6 flex flex-col gap-2">
+        <div className="lg:hidden border-t border-[#232a3d] bg-[#0c0d14] px-6 py-6 flex flex-col gap-2">
           {links.map((link) => (
             <a
               key={link.href}
@@ -128,7 +135,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="flex items-center justify-center w-full py-3 text-sm font-mono font-semibold text-zinc-950 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 rounded-lg transition shadow-lg"
             >
-              Summon Resume Scroll (PDF)
+              Unduh Curriculum Vitae (PDF) 📜
             </a>
           </div>
         </div>

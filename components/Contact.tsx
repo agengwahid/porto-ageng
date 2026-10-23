@@ -6,7 +6,7 @@ export default function Contact() {
   const [copied, setCopied] = useState(false);
   const [alias, setAlias] = useState("");
   const [villageEmail, setVillageEmail] = useState("");
-  const [engagement, setEngagement] = useState("Full-Time Backend / Cloud Jonin");
+  const [engagement, setEngagement] = useState("Full-Time Backend / Cloud Developer");
   const [brief, setBrief] = useState("");
   const [summonSuccess, setSummonSuccess] = useState(false);
 
@@ -23,59 +23,59 @@ export default function Contact() {
     if (!villageEmail || !brief) return;
     setSummonSuccess(true);
     // Open email client with pre-filled content
-    const subject = encodeURIComponent(`[Shinobi Mission Inquiry] ${engagement} - ${alias || "Ninja Ally"}`);
+    const subject = encodeURIComponent(`[Hiring & Kolaborasi] ${engagement} - ${alias || "Recruiter / Partner"}`);
     const body = encodeURIComponent(
-      `Ninja Alias: ${alias}\nReturn Village Email: ${villageEmail}\nEngagement Type: ${engagement}\n\nProject Brief Dispatch:\n${brief}`
+      `Nama / Perusahaan: ${alias}\nEmail: ${villageEmail}\nTipe Kebutuhan: ${engagement}\n\nPesan / Detail Kebutuhan:\n${brief}`
     );
     window.location.href = `mailto:${directEmail}?subject=${subject}&body=${body}`;
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 px-6 border-b border-[#262b3a] relative overflow-hidden">
+    <section id="contact" className="py-24 md:py-32 px-6 border-b border-[#232a3d] relative overflow-hidden">
       {/* AMBIENT CHAKRA GLOW */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-orange-600/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-orange-600/[0.06] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto relative z-10">
-        {/* SECTION HEADER (PRD Section 4) */}
+        {/* SECTION HEADER */}
         <div className="mb-14 text-center max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 font-mono text-xs text-orange-400 uppercase tracking-widest mb-3">
             <span>05</span>
             <span>//</span>
-            <span>KUCHIYOSE SUMMONING SCROLL</span>
+            <span>HUBUNGI & DISKUSI PELUANG KERJA</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-            Summon the Jonin Architect
+            Mari Berkolaborasi & Membangun Sistem
           </h2>
           <p className="text-zinc-300 mt-4 text-sm sm:text-base leading-relaxed">
-            Ready to initiate a backend deployment, scale cloud infrastructure, or discuss engineering opportunities? Cast a summoning scroll or reach out through direct endpoints.
+            Terbuka untuk posisi Full-Time Backend Developer, Cloud Engineer, proyek kontrak API, maupun konsultasi infrastruktur Google Cloud Platform. Kirimkan pesan atau hubungi kontak langsung di bawah ini.
           </p>
         </div>
 
         {/* SUMMONING INTERACTION CARD */}
-        <div className="rounded-2xl bg-[#0f1118] border-2 border-[#262b3a] hover:border-orange-500/50 transition duration-300 p-6 sm:p-10 shadow-2xl">
+        <div className="rounded-2xl bg-[#0e111a] border border-[#232a3d] hover:border-orange-500/50 transition duration-300 p-6 sm:p-10 shadow-2xl">
           <div className="grid lg:grid-cols-12 gap-10 items-start">
-            {/* LEFT: INTERACTIVE KUCHIYOSE FORM (7 COLS) */}
+            {/* LEFT: FORMULIR DISPATCH (7 COLS) */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="flex items-center justify-between pb-3 border-b border-[#262b3a]">
+              <div className="flex items-center justify-between pb-3 border-b border-[#232a3d]">
                 <span className="font-mono text-xs text-orange-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
                   <span>📜</span>
-                  <span>KUCHIYOSE JUTSU FORM</span>
+                  <span>FORMULIR PESAN & DISKUSI</span>
                 </span>
-                <span className="font-mono text-[11px] text-zinc-500">DISPATCH_ENCRYPTED</span>
+                <span className="font-mono text-[11px] text-zinc-500">KUCHIYOSE_DISPATCH</span>
               </div>
 
               {summonSuccess ? (
                 <div className="p-6 rounded-xl bg-orange-950/30 border border-orange-500/60 text-center space-y-3">
                   <div className="text-3xl">🥷 ⚡</div>
-                  <h3 className="text-lg font-bold text-white">Summoning Jutsu Activated</h3>
+                  <h3 className="text-lg font-bold text-white">Pesan Siap Ditransmisikan</h3>
                   <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed max-w-md mx-auto">
-                    Your mission dispatch has been prepared. Your email client will initiate the transmission to Ageng Wahid directly.
+                    Aplikasi email Anda akan terbuka dengan draf pesan otomatis untuk dikirimkan langsung ke Ageng Wahid.
                   </p>
                   <button
                     onClick={() => setSummonSuccess(false)}
-                    className="mt-2 px-4 py-2 rounded-lg bg-[#161922] border border-[#262b3a] text-xs font-mono text-orange-400 hover:text-white"
+                    className="mt-2 px-4 py-2 rounded-lg bg-[#151926] border border-[#232a3d] text-xs font-mono text-orange-400 hover:text-white"
                   >
-                    Send Another Dispatch
+                    Kirim Pesan Lainnya
                   </button>
                 </div>
               ) : (
@@ -83,21 +83,21 @@ export default function Contact() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="ninja-alias" className="block text-xs font-mono text-zinc-400 mb-1.5">
-                        NINJA ALIAS / NAME
+                        NAMA LENGKAP / PERUSAHAAN
                       </label>
                       <input
                         id="ninja-alias"
                         type="text"
                         value={alias}
                         onChange={(e) => setAlias(e.target.value)}
-                        placeholder="e.g. Kakashi Hatake"
-                        className="w-full px-4 py-2.5 rounded-lg bg-[#161922] border border-[#262b3a] text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
+                        placeholder="Contoh: Tech Recruiter / HR Lead"
+                        className="w-full px-4 py-2.5 rounded-lg bg-[#151926] border border-[#232a3d] text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
                       />
                     </div>
 
                     <div>
                       <label htmlFor="return-village" className="block text-xs font-mono text-zinc-400 mb-1.5">
-                        RETURN VILLAGE (EMAIL) *
+                        ALAMAT EMAIL RESMI *
                       </label>
                       <input
                         id="return-village"
@@ -105,32 +105,32 @@ export default function Contact() {
                         required
                         value={villageEmail}
                         onChange={(e) => setVillageEmail(e.target.value)}
-                        placeholder="recruiter@leafvillage.tech"
-                        className="w-full px-4 py-2.5 rounded-lg bg-[#161922] border border-[#262b3a] text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
+                        placeholder="recruiter@company.com"
+                        className="w-full px-4 py-2.5 rounded-lg bg-[#151926] border border-[#232a3d] text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
                       />
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="engagement-type" className="block text-xs font-mono text-zinc-400 mb-1.5">
-                      MISSION ENGAGEMENT TYPE
+                      TIPE KEBUTUHAN / PELUANG
                     </label>
                     <select
                       id="engagement-type"
                       value={engagement}
                       onChange={(e) => setEngagement(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-lg bg-[#161922] border border-[#262b3a] text-sm text-white focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
+                      className="w-full px-4 py-2.5 rounded-lg bg-[#151926] border border-[#232a3d] text-sm text-white focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
                     >
-                      <option value="Full-Time Backend / Cloud Jonin">Full-Time Backend & Cloud Jonin</option>
-                      <option value="Contract Jutsu & API Architecture">Contract Mission / RESTful API Integration</option>
-                      <option value="Cloud Migration (GCP Consultation)">Cloud Migration & GCP Architecture</option>
-                      <option value="Other High-Impact Project">Other Technical Collaboration</option>
+                      <option value="Full-Time Backend / Cloud Developer">Full-Time Backend & Cloud Developer</option>
+                      <option value="Contract / RESTful API Architecture">Kontrak Proyek / Arsitektur API</option>
+                      <option value="Cloud Migration (GCP Consultation)">Migrasi Cloud & Konsultasi GCP</option>
+                      <option value="Other High-Impact Project">Peluang Kolaborasi Lainnya</option>
                     </select>
                   </div>
 
                   <div>
                     <label htmlFor="project-brief" className="block text-xs font-mono text-zinc-400 mb-1.5">
-                      PROJECT BRIEF DISPATCH *
+                      DETAIL PESAN / DESKRIPSI KEBUTUHAN *
                     </label>
                     <textarea
                       id="project-brief"
@@ -138,8 +138,8 @@ export default function Contact() {
                       rows={4}
                       value={brief}
                       onChange={(e) => setBrief(e.target.value)}
-                      placeholder="Outline mission objectives, technical stack, or role details..."
-                      className="w-full px-4 py-2.5 rounded-lg bg-[#161922] border border-[#262b3a] text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none resize-none"
+                      placeholder="Jelaskan kebutuhan peran, tech stack, atau cakupan proyek yang ingin didiskusikan..."
+                      className="w-full px-4 py-2.5 rounded-lg bg-[#151926] border border-[#232a3d] text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none resize-none"
                     />
                   </div>
 
@@ -147,7 +147,7 @@ export default function Contact() {
                     type="submit"
                     className="w-full py-3.5 rounded-lg bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-zinc-950 font-mono font-bold text-xs uppercase tracking-widest hover:brightness-110 transition duration-150 shadow-[0_0_20px_rgba(249,115,22,0.3)] flex items-center justify-center gap-2"
                   >
-                    <span>Cast Summoning Jutsu</span>
+                    <span>Kirim Pesan / Inisiasi Diskusi</span>
                     <span>⚡</span>
                   </button>
                 </form>
@@ -155,49 +155,51 @@ export default function Contact() {
             </div>
 
             {/* RIGHT: DIRECT CHANNELS & TELEMETRY (5 COLS) */}
-            <div className="lg:col-span-5 lg:border-l lg:border-[#262b3a] lg:pl-8 space-y-6">
+            <div className="lg:col-span-5 lg:border-l lg:border-[#232a3d] lg:pl-8 space-y-6">
               <div>
                 <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block mb-2">
-                  DIRECT SCROLL ENDPOINT
+                  ALAMAT EMAIL UTAMA
                 </span>
                 <div className="flex items-center gap-2">
-                  <div className="px-3.5 py-2.5 rounded-lg bg-[#161922] border border-[#262b3a] font-mono text-xs text-orange-300 flex-1 truncate">
+                  <div className="px-3.5 py-2.5 rounded-lg bg-[#151926] border border-[#232a3d] font-mono text-xs text-orange-300 flex-1 truncate">
                     {directEmail}
                   </div>
                   <button
                     onClick={handleCopy}
                     className="px-3.5 py-2.5 rounded-lg bg-orange-500 text-zinc-950 font-mono font-bold text-xs uppercase tracking-wider hover:bg-orange-400 transition flex items-center gap-1"
-                    title="Copy email to clipboard"
+                    title="Salin email ke clipboard"
                   >
-                    {copied ? "✓ Copied" : "Copy"}
+                    {copied ? "✓ Tersalin" : "Salin"}
                   </button>
                 </div>
               </div>
 
-              <div className="space-y-4 font-mono text-xs pt-4 border-t border-[#262b3a]">
+              <div className="space-y-4 font-mono text-xs pt-4 border-t border-[#232a3d]">
                 <div>
-                  <p className="text-zinc-500 uppercase">VOICE & WHATSAPP BEACON</p>
+                  <p className="text-zinc-500 uppercase">WHATSAPP & TELEPON</p>
                   <a
-                    href="tel:+6282178040716"
+                    href="https://wa.me/6282178040716"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white hover:text-orange-400 transition mt-1 inline-block text-sm font-semibold"
                   >
-                    +62 821-7804-0716
+                    +62 821-7804-0716 ↗
                   </a>
                 </div>
 
                 <div>
-                  <p className="text-zinc-500 uppercase">HIDDEN LEAF BASE</p>
-                  <p className="text-zinc-300 mt-1">Yogyakarta, Indonesia (WIB / UTC+7)</p>
+                  <p className="text-zinc-500 uppercase">DOMISILI & KETERSEDIAAN</p>
+                  <p className="text-zinc-300 mt-1">Yogyakarta, Indonesia (Siap Remote / On-Site)</p>
                 </div>
 
                 <div>
-                  <p className="text-zinc-500 uppercase">NINJA REPUTATION NETWORKS</p>
+                  <p className="text-zinc-500 uppercase">PROFIL PROFESIONAL</p>
                   <div className="flex items-center gap-4 mt-2">
                     <a
                       href="https://github.com/agengwahid"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1.5 rounded bg-[#161922] border border-[#262b3a] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition"
+                      className="px-3.5 py-2 rounded-lg bg-[#151926] border border-[#232a3d] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition"
                     >
                       GitHub ↗
                     </a>
@@ -205,16 +207,16 @@ export default function Contact() {
                       href="https://linkedin.com/in/ageng14"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1.5 rounded bg-[#161922] border border-[#262b3a] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition"
+                      className="px-3.5 py-2 rounded-lg bg-[#151926] border border-[#232a3d] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition"
                     >
                       LinkedIn ↗
                     </a>
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-[#262b3a]">
+                <div className="pt-4 border-t border-[#232a3d]">
                   <p className="text-[11px] text-zinc-400 leading-relaxed">
-                    Notice: Communications transmitted through this scroll receive a response within 24 hours on business cycles.
+                    Catatan: Komunikasi melalui formulir atau email langsung akan ditanggapi dalam waktu 24 jam pada hari kerja.
                   </p>
                 </div>
               </div>

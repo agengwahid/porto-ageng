@@ -6,31 +6,31 @@ export default function Projects() {
   const auxiliaryMissions = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-24 md:py-32 px-6 border-b border-[#262b3a]">
+    <section id="projects" className="py-24 md:py-32 px-6 border-b border-[#232a3d]">
       <div className="max-w-7xl mx-auto">
-        {/* SECTION HEADER (PRD Section 4) */}
+        {/* SECTION HEADER */}
         <div className="mb-16">
           <div className="flex items-center gap-2 font-mono text-xs text-orange-400 uppercase tracking-widest mb-3">
             <span>02</span>
             <span>//</span>
-            <span>CLASSIFIED MISSIONS SHOWCASE</span>
+            <span>PORTFOLIO PROYEK & ARSITEKTUR PRODUKSI</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-                High-Stakes Technical Deployments
+                Studi Kasus & Implementasi Sistem
               </h2>
-              <p className="mt-3 text-zinc-400 text-sm sm:text-base max-w-2xl leading-relaxed">
-                Mission dossiers detailing cloud architecture, high-throughput APIs, and database engineering completed with verified operational success.
+              <p className="mt-3 text-zinc-300 text-sm sm:text-base max-w-2xl leading-relaxed">
+                Dokumentasi arsitektur sistem riil: inference API machine learning pada Google Cloud Run, aplikasi enterprise berbasis Laravel & MySQL, serta arsitektur database teroptimasi.
               </p>
             </div>
             <a
               href="https://github.com/agengwahid"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-mono text-xs text-orange-400 hover:text-orange-300 transition"
+              className="inline-flex items-center gap-2 font-mono text-xs text-orange-400 hover:text-orange-300 transition px-3.5 py-2 rounded-lg bg-[#0e111a] border border-[#232a3d] hover:border-orange-500/50"
             >
-              <span>ACCESS GITHUB REPOSITORIES</span>
+              <span>LIHAT SEMUA REPOSITORI GITHUB</span>
               <span>↗</span>
             </a>
           </div>
@@ -41,11 +41,11 @@ export default function Projects() {
           {featuredMissions.map((mission, idx) => (
             <div
               key={idx}
-              className="rounded-2xl bg-[#0f1118] border border-[#262b3a] hover:border-orange-500/60 transition-all duration-300 overflow-hidden shadow-xl"
+              className="rounded-2xl bg-[#0e111a] border border-[#232a3d] hover:border-orange-500/60 transition-all duration-300 overflow-hidden shadow-xl hover:-translate-y-1"
             >
               <div className="grid lg:grid-cols-12 gap-0 items-stretch">
                 {/* PREVIEW IMAGE CONTAINER WITH MISSION SEAL */}
-                <div className="lg:col-span-5 relative min-h-[280px] lg:min-h-full bg-[#0a0b0e] border-b lg:border-b-0 lg:border-r border-[#262b3a]">
+                <div className="lg:col-span-5 relative min-h-[280px] lg:min-h-full bg-[#090a0f] border-b lg:border-b-0 lg:border-r border-[#232a3d]">
                   <Image
                     src={mission.image}
                     alt={mission.title}
@@ -57,7 +57,7 @@ export default function Projects() {
                   {/* S-RANK OR A-RANK MISSION BADGE */}
                   <div className="absolute top-4 left-4 flex items-center gap-2">
                     <span
-                      className={`px-3 py-1 rounded font-mono text-xs font-extrabold tracking-wider border shadow-md ${
+                      className={`px-3 py-1 rounded-md font-mono text-xs font-extrabold tracking-wider border shadow-md ${
                         mission.rankBadge === "S-RANK"
                           ? "bg-amber-950/90 border-amber-500 text-amber-300 shadow-amber-900/30"
                           : "bg-orange-950/90 border-orange-500 text-orange-300 shadow-orange-900/30"
@@ -65,7 +65,7 @@ export default function Projects() {
                     >
                       {mission.rankBadge}
                     </span>
-                    <span className="px-2 py-0.5 rounded bg-[#090a0f]/90 border border-[#262b3a] font-mono text-[10px] text-zinc-300">
+                    <span className="px-2 py-0.5 rounded-md bg-[#090a0f]/90 border border-[#232a3d] font-mono text-[10px] text-zinc-300">
                       {mission.codename}
                     </span>
                   </div>
@@ -88,9 +88,9 @@ export default function Projects() {
                     </p>
 
                     {/* ARCHITECTURAL HIGHLIGHTS */}
-                    <div className="mt-5 pt-4 border-t border-[#262b3a]/70">
+                    <div className="mt-5 pt-4 border-t border-[#232a3d]">
                       <p className="font-mono text-xs text-orange-400/90 uppercase tracking-wider mb-2">
-                        Classified Technical Execution:
+                        Pencapaian Teknis & Arsitektur:
                       </p>
                       <ul className="space-y-1.5 text-xs text-zinc-300">
                         {mission.highlights.map((h, i) => (
@@ -104,12 +104,12 @@ export default function Projects() {
                   </div>
 
                   {/* TECH STACK & ACCESS DOSSIER */}
-                  <div className="mt-6 pt-5 border-t border-[#262b3a] flex flex-wrap items-center justify-between gap-4">
+                  <div className="mt-6 pt-5 border-t border-[#232a3d] flex flex-wrap items-center justify-between gap-4">
                     <div className="flex flex-wrap gap-1.5">
                       {mission.tech.map((t, i) => (
                         <span
                           key={i}
-                          className="px-2.5 py-1 rounded bg-[#161922] border border-[#262b3a] text-xs font-mono text-zinc-300"
+                          className="px-2.5 py-1 rounded bg-[#151926] border border-[#232a3d] text-xs font-mono text-zinc-300"
                         >
                           {t}
                         </span>
@@ -121,9 +121,9 @@ export default function Projects() {
                         href={mission.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs font-mono font-semibold text-orange-400 hover:text-orange-300 transition inline-flex items-center gap-1.5"
+                        className="text-xs font-mono font-semibold text-orange-400 hover:text-orange-300 transition inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#151926] border border-orange-500/30 hover:border-orange-500"
                       >
-                        <span>Access Code Scroll</span>
+                        <span>Lihat Source Code</span>
                         <span>↗</span>
                       </a>
                     )}
@@ -137,17 +137,17 @@ export default function Projects() {
         {/* 2. AUXILIARY MISSIONS (A-RANK & B-RANK) */}
         <div>
           <h3 className="font-mono text-xs text-zinc-400 uppercase tracking-widest mb-6">
-            Auxiliary Deployments & Web Systems
+            Proyek Sistem Informasi & Web Tambahan
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {auxiliaryMissions.map((mission, idx) => (
               <div
                 key={idx}
-                className="rounded-xl bg-[#0f1118] border border-[#262b3a] hover:border-cyan-500/50 transition duration-200 p-6 flex flex-col justify-between"
+                className="rounded-2xl bg-[#0e111a] border border-[#232a3d] hover:border-cyan-500/50 transition duration-200 p-6 flex flex-col justify-between hover:-translate-y-1"
               >
                 <div>
                   <div className="flex items-center justify-between text-xs font-mono text-zinc-400 mb-2">
-                    <span className="px-2 py-0.5 rounded bg-[#161922] border border-[#262b3a] text-cyan-400 font-semibold">
+                    <span className="px-2 py-0.5 rounded bg-[#151926] border border-[#232a3d] text-cyan-400 font-semibold">
                       {mission.rankBadge}
                     </span>
                     <span>{mission.period}</span>
@@ -171,12 +171,12 @@ export default function Projects() {
                   </ul>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#262b3a] flex flex-wrap items-center justify-between gap-3">
+                <div className="mt-6 pt-4 border-t border-[#232a3d] flex flex-wrap items-center justify-between gap-3">
                   <div className="flex flex-wrap gap-1.5">
                     {mission.tech.map((t, i) => (
                       <span
                         key={i}
-                        className="px-2 py-0.5 rounded bg-[#161922] text-[11px] font-mono text-zinc-400"
+                        className="px-2 py-0.5 rounded bg-[#151926] text-[11px] font-mono text-zinc-400"
                       >
                         {t}
                       </span>
@@ -190,7 +190,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="text-xs font-mono text-cyan-400 hover:text-cyan-300 transition"
                     >
-                      Dossier ↗
+                      Repositori ↗
                     </a>
                   )}
                 </div>
