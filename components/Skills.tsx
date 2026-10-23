@@ -1,101 +1,137 @@
-interface SkillGroup {
-  domain: string;
-  code: string;
+interface ElementalAffinity {
+  element: string;
+  kanji: string;
+  icon: string;
+  jutsuCategory: string;
   description: string;
-  items: string[];
+  techniques: string[];
+  borderGlow: string;
+  badgeBg: string;
+  accentColor: string;
 }
 
-const skillGroups: SkillGroup[] = [
+const affinities: ElementalAffinity[] = [
   {
-    domain: "Backend & API Architecture",
-    code: "BACKEND_SERVICES",
-    description: "Developing robust server-side applications, RESTful endpoints, and business logic.",
-    items: ["PHP", "Laravel", "Node.js", "Express.js", "RESTful API", "MVC Pattern"],
+    element: "Lightning Release (Raiton)",
+    kanji: "雷遁",
+    icon: "⚡",
+    jutsuCategory: "HIGH-THROUGHPUT BACKEND & APIS",
+    description: "High-speed server execution, asynchronous event loops, and clean RESTful API endpoint routing.",
+    techniques: ["Node.js", "Express.js", "PHP", "Laravel", "RESTful API", "MVC Architecture", "Async/Await"],
+    borderGlow: "hover:border-cyan-400/80 shadow-[0_0_15px_rgba(6,182,212,0.08)]",
+    badgeBg: "bg-cyan-950/40 border-cyan-800/40 text-cyan-300",
+    accentColor: "text-cyan-400",
   },
   {
-    domain: "Cloud & Infrastructure",
-    code: "CLOUD_DEVOPS",
-    description: "Cloud computing and service provisioning on Google Cloud Platform.",
-    items: ["Google Cloud Platform", "Compute Engine", "Cloud Run", "Cloud Storage", "Linux CLI"],
+    element: "Earth Release (Doton)",
+    kanji: "土遁",
+    icon: "⛰️",
+    jutsuCategory: "CLOUD PLATFORMS & RESILIENT INFRASTRUCTURE",
+    description: "Rock-solid cloud infrastructure, serverless containers, and enterprise computing on Google Cloud Platform.",
+    techniques: ["Google Cloud Platform", "Compute Engine", "Cloud Run", "Cloud Storage", "Linux Shell", "GCP IAM & VPC"],
+    borderGlow: "hover:border-orange-500/80 shadow-[0_0_15px_rgba(249,115,22,0.08)]",
+    badgeBg: "bg-orange-950/40 border-orange-800/40 text-orange-300",
+    accentColor: "text-orange-400",
   },
   {
-    domain: "Database & Data Modeling",
-    code: "DATA_STORAGE",
-    description: "Schema normalization, indexing, and persistent database management.",
-    items: ["MySQL", "Relational Modeling", "NoSQL (Firestore)", "Query Optimization", "Data Integrity"],
+    element: "Sealing Jutsu (Fuinjutsu)",
+    kanji: "封印術",
+    icon: "📜",
+    jutsuCategory: "DATABASE SCHEMA & SECURE PERSISTENCE",
+    description: "Immutable data persistence, relational database normalization, indexed queries, and document store modeling.",
+    techniques: ["MySQL", "Relational Schema Normalization", "Firestore NoSQL", "Query Optimization", "Data Integrity"],
+    borderGlow: "hover:border-amber-400/80 shadow-[0_0_15px_rgba(245,158,11,0.08)]",
+    badgeBg: "bg-amber-950/40 border-amber-800/40 text-amber-300",
+    accentColor: "text-amber-400",
   },
   {
-    domain: "Engineering Workflow & Tools",
-    code: "DEV_WORKFLOW",
-    description: "Version control, API contract testing, and collaboration standards.",
-    items: ["Git & GitHub", "Postman", "Markdown Documentation", "Agile / Scrum Practices"],
-  },
-  {
-    domain: "Professional & Academic Mentorship",
-    code: "LEADERSHIP_CORE",
-    description: "Technical instruction, analytical problem-solving, and cross-functional teamwork.",
-    items: [
-      "Computer Lab Teaching Assistance",
-      "Technical Mentorship",
-      "Analytical Problem Solving",
-      "Team Collaboration",
-      "Time Management",
-    ],
+    element: "Wind Release (Futon)",
+    kanji: "風遁",
+    icon: "🌪️",
+    jutsuCategory: "DEV WORKFLOW & ACADEMIC MENTORSHIP",
+    description: "Seamless version control, API contract testing, and technical mentorship across 100+ lab students.",
+    techniques: ["Git & GitHub", "Postman", "CI/CD Concepts", "Lab Practicum Teaching", "Analytical Problem Solving", "Teamwork"],
+    borderGlow: "hover:border-emerald-400/80 shadow-[0_0_15px_rgba(52,211,153,0.08)]",
+    badgeBg: "bg-emerald-950/40 border-emerald-800/40 text-emerald-300",
+    accentColor: "text-emerald-400",
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 md:py-32 px-6 border-b border-[#1e2638]">
+    <section id="skills" className="py-24 md:py-32 px-6 border-b border-[#262b3a] relative">
       <div className="max-w-7xl mx-auto">
-        {/* SECTION HEADER */}
+        {/* SECTION HEADER (PRD Section 4) */}
         <div className="mb-16">
-          <div className="flex items-center gap-2 font-mono text-xs text-sky-400 uppercase tracking-widest mb-3">
-            <span>04</span>
-            <span>/</span>
-            <span>TECHNICAL CAPABILITIES</span>
+          <div className="flex items-center gap-2 font-mono text-xs text-orange-400 uppercase tracking-widest mb-3">
+            <span>01</span>
+            <span>//</span>
+            <span>NINJUTSU CODEX & ELEMENTAL AFFINITIES</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-            Tools, Technologies & Engineering Practices
-          </h2>
-          <p className="text-zinc-400 mt-2 text-sm sm:text-base max-w-2xl">
-            A comprehensive overview of backend stacks, cloud infrastructure, and databases I leverage in production and academic environments.
-          </p>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+                Elemental Stacks & Technical Jutsu
+              </h2>
+              <p className="text-zinc-400 mt-3 text-sm sm:text-base max-w-2xl leading-relaxed">
+                Categorized by elemental nature: Lightning (APIs & Backend), Earth (GCP Cloud Systems), Sealing (Relational & NoSQL Databases), and Wind (Collaboration & Mentorship).
+              </p>
+            </div>
+            <div className="font-mono text-xs text-zinc-500 border border-[#262b3a] px-3 py-1.5 rounded bg-[#111319]">
+              SYS: 4_ELEMENTS_ACTIVE
+            </div>
+          </div>
         </div>
 
-        {/* DOMAIN CARDS GRID */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillGroups.map((group, idx) => (
+        {/* AFFINITIES GRID */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {affinities.map((item, idx) => (
             <div
               key={idx}
-              className={`rounded-xl bg-[#0f141f] border border-[#1e2638] hover:border-[#2b374e] transition duration-200 p-6 flex flex-col justify-between ${
-                idx === 4 ? "md:col-span-2 lg:col-span-2" : ""
-              }`}
+              className={`rounded-2xl bg-[#0f1118] border border-[#262b3a] ${item.borderGlow} transition-all duration-300 p-6 sm:p-8 flex flex-col justify-between group`}
             >
               <div>
-                <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400 mb-3">
-                  <span className="text-sky-400">{group.code}</span>
-                  <span>DOMAIN 0{idx + 1}</span>
+                {/* HEADER OF CARD WITH KANJI STAMP */}
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl p-2 rounded-lg bg-[#161922] border border-[#262b3a]">
+                      {item.icon}
+                    </span>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition flex items-center gap-2">
+                        <span>{item.element}</span>
+                      </h3>
+                      <p className={`text-[11px] font-mono font-semibold tracking-wider mt-0.5 ${item.accentColor}`}>
+                        {item.jutsuCategory}
+                      </p>
+                    </div>
+                  </div>
+
+                  <span className="text-2xl font-bold text-zinc-700/60 group-hover:text-zinc-500 transition font-mono select-none">
+                    {item.kanji}
+                  </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-white tracking-tight">
-                  {group.domain}
-                </h3>
-
-                <p className="mt-2 text-xs text-zinc-400 leading-relaxed">
-                  {group.description}
+                <p className="text-sm text-zinc-300 leading-relaxed mt-2">
+                  {item.description}
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#1e2638] flex flex-wrap gap-2">
-                {group.items.map((skill, sIdx) => (
-                  <span
-                    key={sIdx}
-                    className="px-2.5 py-1 rounded bg-[#151c2c] border border-[#232c3f] text-xs font-mono text-zinc-300"
-                  >
-                    {skill}
-                  </span>
-                ))}
+              {/* TECHNIQUES BADGE LIST */}
+              <div className="mt-8 pt-5 border-t border-[#262b3a]/60">
+                <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-3">
+                  MASTERY TECHNIQUES:
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {item.techniques.map((tech, tIdx) => (
+                    <span
+                      key={tIdx}
+                      className={`px-3 py-1 rounded-md text-xs font-mono font-medium border ${item.badgeBg} transition`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
@@ -104,4 +140,5 @@ export default function Skills() {
     </section>
   );
 }
+
 
