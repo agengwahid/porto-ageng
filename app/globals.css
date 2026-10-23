@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #090a0f;
-  --surface: #0e111a;
-  --surface-raised: #151926;
-  --surface-overlay: #1c2233;
-  --border: #232a3d;
-  --border-subtle: #171d2c;
+  /* True Japanese Sumi Ink & Obsidian Palette (No generic AI slate-blue) */
+  --background: #070709;
+  --surface: #0d0d11;
+  --surface-raised: #131318;
+  --surface-overlay: #1a1a20;
+  --border: #22222a;
+  --border-subtle: #17171e;
   --chakra-orange: #f97316;
   --chakra-glow: rgba(249, 115, 22, 0.25);
-  --raiton-cyan: #06b6d4;
-  --raiton-glow: rgba(6, 182, 212, 0.25);
-  --parchment-gold: #f59e0b;
-  --foreground: #f8fafc;
-  --foreground-muted: #94a3b8;
+  --chakra-flame: #ea580c;
+  --parchment-gold: #eab308;
+  --foreground: #f4f4f5;
+  --foreground-muted: #a1a1aa;
 }
 
 @theme inline {
@@ -25,8 +25,8 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #090a0f;
-  color: #f8fafc;
+  background-color: #070709;
+  color: #f4f4f5;
 }
 
 body {
@@ -36,9 +36,10 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Crystal-crisp geometric micro-dot grid for high-tech aesthetic without blurriness */
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 32px 32px;
+  overflow-x: hidden;
+  /* Ultra-crisp subtle obsidian grain (clean, zero blurriness) */
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
   background-position: 0 0;
 }
 
@@ -54,74 +55,90 @@ body {
 
 /* Custom Sleek Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #090a0f;
+  background: #070709;
 }
 ::-webkit-scrollbar-thumb {
-  background: #232a3d;
+  background: #22222a;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #f97316;
 }
 
-/* Chakra & Kunai Animation Keyframes */
-@keyframes chakra-pulse {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(249, 115, 22, 0.2), inset 0 0 15px rgba(249, 115, 22, 0.1);
-    border-color: rgba(249, 115, 22, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 35px rgba(249, 115, 22, 0.4), inset 0 0 25px rgba(249, 115, 22, 0.2);
-    border-color: rgba(249, 115, 22, 0.9);
-  }
+/* Kurama Chakra Nine-Tails Wave Animations */
+@keyframes kurama-tail-left-1 {
+  0%, 100% { transform: rotate(-35deg) scaleY(1); }
+  50% { transform: rotate(-42deg) scaleY(1.08) skewX(-4deg); }
+}
+@keyframes kurama-tail-left-2 {
+  0%, 100% { transform: rotate(-22deg) scaleY(1); }
+  50% { transform: rotate(-28deg) scaleY(1.05) skewX(-3deg); }
+}
+@keyframes kurama-tail-left-3 {
+  0%, 100% { transform: rotate(-10deg) scaleY(1); }
+  50% { transform: rotate(-15deg) scaleY(1.06) skewX(-2deg); }
+}
+@keyframes kurama-tail-center {
+  0%, 100% { transform: rotate(0deg) scaleY(1); }
+  50% { transform: rotate(4deg) scaleY(1.1) skewY(2deg); }
+}
+@keyframes kurama-tail-right-1 {
+  0%, 100% { transform: rotate(12deg) scaleY(1); }
+  50% { transform: rotate(18deg) scaleY(1.06) skewX(2deg); }
+}
+@keyframes kurama-tail-right-2 {
+  0%, 100% { transform: rotate(24deg) scaleY(1); }
+  50% { transform: rotate(30deg) scaleY(1.05) skewX(3deg); }
+}
+@keyframes kurama-tail-right-3 {
+  0%, 100% { transform: rotate(38deg) scaleY(1); }
+  50% { transform: rotate(45deg) scaleY(1.08) skewX(4deg); }
 }
 
-@keyframes chakra-float {
+@keyframes kurama-aura-pulse {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(3deg);
-  }
-}
-
-@keyframes kunai-glide {
-  0%, 100% {
-    transform: translateY(0px) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(-6px) rotate(-40deg);
-  }
-}
-
-@keyframes chakra-glow-breath {
-  0%, 100% {
-    opacity: 0.4;
+    opacity: 0.18;
     transform: scale(1);
+    filter: drop-shadow(0 0 25px rgba(249, 115, 22, 0.3));
   }
   50% {
-    opacity: 0.75;
-    transform: scale(1.04);
+    opacity: 0.32;
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 45px rgba(249, 115, 22, 0.5));
   }
 }
 
-.animate-chakra-pulse {
-  animation: chakra-pulse 3s ease-in-out infinite;
+@keyframes chakra-ember-float {
+  0% {
+    transform: translateY(0px) translateX(0px) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-240px) translateX(25px) scale(0.3);
+    opacity: 0;
+  }
 }
 
-.animate-chakra-float {
-  animation: chakra-float 4s ease-in-out infinite;
+@keyframes shuriken-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-.animate-kunai-glide {
-  animation: kunai-glide 3.5s ease-in-out infinite;
+.animate-kurama-aura {
+  animation: kurama-aura-pulse 5s ease-in-out infinite;
 }
 
-.animate-chakra-breath {
-  animation: chakra-glow-breath 4s ease-in-out infinite;
+.animate-shuriken-spin {
+  animation: shuriken-spin 6s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

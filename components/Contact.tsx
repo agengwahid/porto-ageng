@@ -31,13 +31,13 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 px-6 border-b border-[#232a3d] relative overflow-hidden">
-      {/* AMBIENT CHAKRA GLOW */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-orange-600/[0.06] rounded-full blur-[120px] pointer-events-none" />
+    <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 border-b border-[#22222a] relative overflow-hidden">
+      {/* WARM AMBIENT CHAKRA GLOW */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] sm:w-[580px] h-[450px] sm:h-[580px] bg-orange-600/[0.07] rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto relative z-10">
         {/* SECTION HEADER */}
-        <div className="mb-14 text-center max-w-2xl mx-auto">
+        <div className="mb-12 sm:mb-14 text-center max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 font-mono text-xs text-orange-400 uppercase tracking-widest mb-3">
             <span>05</span>
             <span>//</span>
@@ -51,12 +51,12 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* SUMMONING INTERACTION CARD */}
-        <div className="rounded-2xl bg-[#0e111a] border border-[#232a3d] hover:border-orange-500/50 transition duration-300 p-6 sm:p-10 shadow-2xl">
-          <div className="grid lg:grid-cols-12 gap-10 items-start">
+        {/* INTERACTION CARD */}
+        <div className="rounded-2xl bg-[#0d0d11] border border-[#22222a] hover:border-orange-500/50 transition duration-300 p-5 sm:p-10 shadow-2xl">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             {/* LEFT: FORMULIR DISPATCH (7 COLS) */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="flex items-center justify-between pb-3 border-b border-[#232a3d]">
+              <div className="flex items-center justify-between pb-3 border-b border-[#22222a]">
                 <span className="font-mono text-xs text-orange-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
                   <span>📜</span>
                   <span>FORMULIR PESAN & DISKUSI</span>
@@ -73,7 +73,7 @@ export default function Contact() {
                   </p>
                   <button
                     onClick={() => setSummonSuccess(false)}
-                    className="mt-2 px-4 py-2 rounded-lg bg-[#151926] border border-[#232a3d] text-xs font-mono text-orange-400 hover:text-white"
+                    className="mt-2 min-h-[44px] px-4 py-2.5 rounded-xl bg-[#131318] border border-[#22222a] text-xs font-mono text-orange-400 hover:text-white"
                   >
                     Kirim Pesan Lainnya
                   </button>
@@ -91,7 +91,7 @@ export default function Contact() {
                         value={alias}
                         onChange={(e) => setAlias(e.target.value)}
                         placeholder="Contoh: Tech Recruiter / HR Lead"
-                        className="w-full px-4 py-2.5 rounded-lg bg-[#151926] border border-[#232a3d] text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
+                        className="w-full min-h-[48px] px-4 py-2.5 rounded-xl bg-[#131318] border border-[#22222a] text-base sm:text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
                       />
                     </div>
 
@@ -106,7 +106,7 @@ export default function Contact() {
                         value={villageEmail}
                         onChange={(e) => setVillageEmail(e.target.value)}
                         placeholder="recruiter@company.com"
-                        className="w-full px-4 py-2.5 rounded-lg bg-[#151926] border border-[#232a3d] text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
+                        className="w-full min-h-[48px] px-4 py-2.5 rounded-xl bg-[#131318] border border-[#22222a] text-base sm:text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
                       />
                     </div>
                   </div>
@@ -119,7 +119,7 @@ export default function Contact() {
                       id="engagement-type"
                       value={engagement}
                       onChange={(e) => setEngagement(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-lg bg-[#151926] border border-[#232a3d] text-sm text-white focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
+                      className="w-full min-h-[48px] px-4 py-2.5 rounded-xl bg-[#131318] border border-[#22222a] text-base sm:text-sm text-white focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
                     >
                       <option value="Full-Time Backend / Cloud Developer">Full-Time Backend & Cloud Developer</option>
                       <option value="Contract / RESTful API Architecture">Kontrak Proyek / Arsitektur API</option>
@@ -139,13 +139,13 @@ export default function Contact() {
                       value={brief}
                       onChange={(e) => setBrief(e.target.value)}
                       placeholder="Jelaskan kebutuhan peran, tech stack, atau cakupan proyek yang ingin didiskusikan..."
-                      className="w-full px-4 py-2.5 rounded-lg bg-[#151926] border border-[#232a3d] text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-[#131318] border border-[#22222a] text-base sm:text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-lg bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-zinc-950 font-mono font-bold text-xs uppercase tracking-widest hover:brightness-110 transition duration-150 shadow-[0_0_20px_rgba(249,115,22,0.3)] flex items-center justify-center gap-2"
+                    className="w-full min-h-[48px] py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-zinc-950 font-mono font-bold text-xs uppercase tracking-widest hover:brightness-110 transition duration-150 shadow-[0_0_20px_rgba(249,115,22,0.25)] flex items-center justify-center gap-2"
                   >
                     <span>Kirim Pesan / Inisiasi Diskusi</span>
                     <span>⚡</span>
@@ -155,18 +155,18 @@ export default function Contact() {
             </div>
 
             {/* RIGHT: DIRECT CHANNELS & TELEMETRY (5 COLS) */}
-            <div className="lg:col-span-5 lg:border-l lg:border-[#232a3d] lg:pl-8 space-y-6">
+            <div className="lg:col-span-5 lg:border-l lg:border-[#22222a] lg:pl-8 space-y-6">
               <div>
                 <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block mb-2">
                   ALAMAT EMAIL UTAMA
                 </span>
                 <div className="flex items-center gap-2">
-                  <div className="px-3.5 py-2.5 rounded-lg bg-[#151926] border border-[#232a3d] font-mono text-xs text-orange-300 flex-1 truncate">
+                  <div className="px-3.5 py-3 rounded-xl bg-[#131318] border border-[#22222a] font-mono text-xs text-orange-300 flex-1 truncate min-h-[44px] flex items-center">
                     {directEmail}
                   </div>
                   <button
                     onClick={handleCopy}
-                    className="px-3.5 py-2.5 rounded-lg bg-orange-500 text-zinc-950 font-mono font-bold text-xs uppercase tracking-wider hover:bg-orange-400 transition flex items-center gap-1"
+                    className="min-h-[44px] px-4 py-2.5 rounded-xl bg-orange-500 text-zinc-950 font-mono font-bold text-xs uppercase tracking-wider hover:bg-orange-400 transition flex items-center gap-1"
                     title="Salin email ke clipboard"
                   >
                     {copied ? "✓ Tersalin" : "Salin"}
@@ -174,14 +174,14 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="space-y-4 font-mono text-xs pt-4 border-t border-[#232a3d]">
+              <div className="space-y-4 font-mono text-xs pt-4 border-t border-[#22222a]">
                 <div>
                   <p className="text-zinc-500 uppercase">WHATSAPP & TELEPON</p>
                   <a
                     href="https://wa.me/6282178040716"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-orange-400 transition mt-1 inline-block text-sm font-semibold"
+                    className="text-white hover:text-orange-400 transition mt-1 inline-block text-sm font-semibold min-h-[36px] flex items-center"
                   >
                     +62 821-7804-0716 ↗
                   </a>
@@ -194,12 +194,12 @@ export default function Contact() {
 
                 <div>
                   <p className="text-zinc-500 uppercase">PROFIL PROFESIONAL</p>
-                  <div className="flex items-center gap-4 mt-2">
+                  <div className="flex items-center gap-3 mt-2">
                     <a
                       href="https://github.com/agengwahid"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3.5 py-2 rounded-lg bg-[#151926] border border-[#232a3d] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition"
+                      className="min-h-[44px] px-4 py-2 rounded-xl bg-[#131318] border border-[#22222a] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition flex items-center"
                     >
                       GitHub ↗
                     </a>
@@ -207,14 +207,14 @@ export default function Contact() {
                       href="https://linkedin.com/in/ageng14"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3.5 py-2 rounded-lg bg-[#151926] border border-[#232a3d] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition"
+                      className="min-h-[44px] px-4 py-2 rounded-xl bg-[#131318] border border-[#22222a] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition flex items-center"
                     >
                       LinkedIn ↗
                     </a>
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-[#232a3d]">
+                <div className="pt-4 border-t border-[#22222a]">
                   <p className="text-[11px] text-zinc-400 leading-relaxed">
                     Catatan: Komunikasi melalui formulir atau email langsung akan ditanggapi dalam waktu 24 jam pada hari kerja.
                   </p>

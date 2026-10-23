@@ -28,30 +28,30 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-[#090a0f]/95 backdrop-blur-md border-b border-[#232a3d] z-50 transition-colors">
+    <header className="fixed top-0 left-0 w-full bg-[#070709]/95 backdrop-blur-md border-b border-[#22222a] z-50 transition-colors">
       {/* CHAKRA SCROLL PROGRESS BAR WITH GLOWING TRAVELING MARKER */}
-      <div className="absolute top-0 left-0 w-full h-[3px] bg-[#151926] overflow-visible">
+      <div className="absolute top-0 left-0 w-full h-[3px] bg-[#131318] overflow-visible">
         <div
-          className="relative h-full bg-gradient-to-r from-orange-500 via-amber-400 to-cyan-400 transition-all duration-75"
+          className="relative h-full bg-gradient-to-r from-orange-500 via-amber-400 to-orange-500 transition-all duration-75"
           style={{ width: `${scrollProgress}%` }}
         >
-          {/* Animated Glowing Kunai/Chakra Head at the Scroll Edge */}
+          {/* Animated Glowing Marker at the Scroll Edge */}
           {scrollProgress > 1 && (
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-3.5 h-3.5 rounded-full bg-orange-400 border border-white shadow-[0_0_10px_#f97316] flex items-center justify-center pointer-events-none">
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-3.5 h-3.5 rounded-full bg-orange-400 border border-white shadow-[0_0_12px_#f97316] flex items-center justify-center pointer-events-none">
               <span className="w-1.5 h-1.5 rounded-full bg-zinc-950" />
             </div>
           )}
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* SHINOBI HUD BRAND */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+        {/* SHINOBI BRAND */}
         <a
           href="#"
           className="group flex items-center gap-3 text-zinc-100 font-semibold tracking-tight hover:text-orange-400 transition"
           aria-label="Ageng Wahid Portfolio Home"
         >
-          <span className="w-9 h-9 rounded-xl bg-[#151926] border border-orange-500/50 flex items-center justify-center font-mono text-xs text-orange-400 font-bold group-hover:border-orange-400 group-hover:bg-orange-950/40 transition shadow-[0_0_15px_rgba(249,115,22,0.18)]">
+          <span className="w-9 h-9 rounded-xl bg-[#131318] border border-orange-500/50 flex items-center justify-center font-mono text-xs text-orange-400 font-bold group-hover:border-orange-400 group-hover:bg-orange-950/40 transition shadow-[0_0_15px_rgba(249,115,22,0.18)]">
             AW
           </span>
           <div>
@@ -60,14 +60,14 @@ export default function Navbar() {
                 Ageng Wahid
               </span>
               <span className="px-1.5 py-0.2 rounded bg-orange-950/60 border border-orange-700/50 text-[10px] font-mono text-orange-400 font-semibold tracking-wider">
-                JONIN
+                S.Kom
               </span>
             </div>
-            <p className="text-[10px] font-mono text-zinc-400">BACKEND // CLOUD</p>
+            <p className="text-[10px] font-mono text-zinc-400">BACKEND & CLOUD</p>
           </div>
         </a>
 
-        {/* DESKTOP HUD NAVIGATION (Clear for Recruiters, Stylish Shinobi Badges) */}
+        {/* DESKTOP NAVIGATION */}
         <nav className="hidden lg:flex items-center gap-1 font-mono" aria-label="Main Navigation">
           {links.map((link) => (
             <a
@@ -94,11 +94,11 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* MOBILE TOGGLE (Tap Target >= 44px) */}
+        {/* MOBILE TOGGLE (Tap Target >= 48px) */}
         <button
           onClick={() => setOpen((prev) => !prev)}
-          className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg border border-[#232a3d] bg-[#151926] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition"
-          aria-label={open ? "Close navigation" : "Open navigation"}
+          className="lg:hidden flex items-center justify-center w-12 h-12 rounded-xl border border-[#22222a] bg-[#131318] text-zinc-300 hover:text-orange-400 hover:border-orange-500 transition focus-visible:ring-2 focus-visible:ring-orange-500"
+          aria-label={open ? "Tutup navigasi" : "Buka navigasi"}
           aria-expanded={open}
         >
           {open ? (
@@ -115,25 +115,25 @@ export default function Navbar() {
 
       {/* MOBILE HUD MENU FLYOUT */}
       {open && (
-        <div className="lg:hidden border-t border-[#232a3d] bg-[#0c0d14] px-6 py-6 flex flex-col gap-2">
+        <div className="lg:hidden border-t border-[#22222a] bg-[#0d0d11] px-5 py-6 flex flex-col gap-2">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="py-3 px-3 text-sm font-mono font-medium text-zinc-200 hover:text-orange-400 hover:bg-orange-950/30 rounded-lg transition flex items-center justify-between"
+              className="min-h-[48px] px-3.5 text-sm font-mono font-medium text-zinc-200 hover:text-orange-400 hover:bg-orange-950/30 rounded-xl transition flex items-center justify-between"
             >
               <span>{link.label}</span>
               <span className="text-xs text-orange-400/80">[{link.code}]</span>
             </a>
           ))}
-          <div className="pt-4 mt-2 border-t border-zinc-800">
+          <div className="pt-4 mt-2 border-t border-[#22222a]">
             <a
               href="/cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="flex items-center justify-center w-full py-3 text-sm font-mono font-semibold text-zinc-950 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 rounded-lg transition shadow-lg"
+              className="min-h-[48px] flex items-center justify-center w-full py-3.5 text-sm font-mono font-semibold text-zinc-950 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 rounded-xl transition shadow-lg"
             >
               Unduh Curriculum Vitae (PDF) 📜
             </a>
