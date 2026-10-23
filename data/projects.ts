@@ -1,5 +1,8 @@
 export interface Project {
   title: string;
+  codename: string;
+  rank: string;
+  rankBadge: "S-RANK" | "A-RANK" | "B-RANK";
   period: string;
   role: string;
   description: string;
@@ -13,15 +16,18 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "DermaScan: Skin Disease Detection Platform",
+    codename: "OPERATION_DERMASCAN",
+    rank: "S-Rank Classified Mission",
+    rankBadge: "S-RANK",
     period: "2024 · Bangkit Academy Capstone",
-    role: "Backend & Cloud Engineer",
+    role: "Backend & Cloud Architect",
     featured: true,
     description:
-      "Engineered secure RESTful APIs using Node.js to power a machine-learning-assisted skin disease detection mobile client. Connected image inference endpoints with Google Cloud Platform infrastructure for automated predictions and data storage.",
+      "Engineered secure, high-throughput RESTful APIs using Node.js to power a machine-learning-assisted skin disease detection mobile application. Connected image inference endpoints with Google Cloud Platform infrastructure for automated predictions and data storage.",
     highlights: [
-      "Designed RESTful endpoints connecting mobile clients to ML model inference",
-      "Deployed backend services on Google Cloud Platform infrastructure",
-      "Structured secure payload processing and Firestore database records",
+      "Engineered RESTful API endpoints bridging client image uploads with Python ML inference",
+      "Provisioned containerized backend services on Google Cloud Platform infrastructure",
+      "Structured secure Firestore document streams with schema validation and auth boundaries",
     ],
     image: "/projects/dermascan.svg",
     tech: ["Node.js", "Express.js", "Google Cloud", "RESTful API", "Machine Learning"],
@@ -29,15 +35,18 @@ export const projects: Project[] = [
   },
   {
     title: "Student Grade Management System",
+    codename: "OPERATION_ACADEMIC_SEAL",
+    rank: "A-Rank Mission",
+    rankBadge: "A-RANK",
     period: "2026 · SMK Negeri 1 Lebong",
-    role: "Fullstack Developer",
+    role: "Fullstack Jonin Developer",
     featured: true,
     description:
-      "Designed and implemented an academic grading and record management portal for SMK Negeri 1 Lebong. Replaced manual spreadsheet workflows with role-based authentication, student record indexing, and an administrative monitoring dashboard.",
+      "Architected and deployed a centralized academic grading and student record system for SMK Negeri 1 Lebong. Replaced error-prone manual spreadsheets with role-based access control, indexed relational schemas, and an administrative telemetry dashboard.",
     highlights: [
-      "Role-based authentication (Admin, Teacher, Staff) with permission boundaries",
-      "Relational schema in MySQL with indexed queries for fast grade report generation",
-      "Responsive administrative dashboard for academic monitoring and export",
+      "Role-based authentication (Super Admin, Teacher, Academic Staff) with strict permission gates",
+      "Normalized relational schema in MySQL with indexed queries for sub-second report generation",
+      "Telemetry dashboard for real-time grade verification, academic audits, and report generation",
     ],
     image: "/projects/grades.svg",
     tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS"],
@@ -45,33 +54,40 @@ export const projects: Project[] = [
   },
   {
     title: "Kost Panjie Resident & Property Portal",
-    period: "2024 · Client Project",
+    codename: "OPERATION_ESTATE_CODEX",
+    rank: "A-Rank Mission",
+    rankBadge: "A-RANK",
+    period: "2024 · Client Mission",
     role: "Fullstack Web Developer",
     description:
-      "Built a web-based property and resident management system for Kost Panjie. Streamlined resident record-keeping, room availability status, and administrative logs into a unified web application.",
+      "Engineered an automated property and resident management application for Kost Panjie. Centralized resident contracts, room occupancy states, and monthly accounting logs into an intuitive web interface.",
     highlights: [
-      "Real-time room occupancy and payment record status tracking",
-      "Normalized relational database structure for property inventory",
-      "Mobile-friendly interface for property administrators",
+      "Real-time room occupancy states and automated payment record logging",
+      "Normalized database schema preventing billing discrepancies and duplicate entries",
+      "Mobile-responsive administrative interface for quick property oversight",
     ],
     image: "/projects/kost.svg",
     tech: ["PHP", "MySQL", "JavaScript", "CSS"],
     link: "https://github.com/agengwahid",
   },
   {
-    title: "Engineer Portfolio & Technical Showcase",
+    title: "Shinobi Developer Portfolio & Interactive Codex",
+    codename: "OPERATION_CHAKRA_SHOWCASE",
+    rank: "B-Rank Mission",
+    rankBadge: "B-RANK",
     period: "2025 · Personal Platform",
-    role: "Frontend Engineer",
+    role: "Frontend Architect",
     description:
-      "Constructed a high-performance personal portfolio built with Next.js, React, and Tailwind CSS. Emphasizes clean engineering aesthetics, strict WCAG accessibility standards, and zero AI slop patterns.",
+      "Constructed a cyber-shinobi developer portfolio combining authentic engineering achievements (GPA 3.91, GCP certification) with immersive Konoha HUD telemetry. Built with Next.js, React, and strict Antislop accessibility standards.",
     highlights: [
-      "Built with Next.js App Router and React for instant page navigation",
-      "Designed with an accessible, high-contrast dark color architecture",
-      "Modular component hierarchy with verified keyboard and modal support",
+      "Built with Next.js App Router and React for instant zero-latency view transitions",
+      "Designed with an accessible, high-contrast Sumi-ink and Chakra-orange visual system",
+      "Modular component hierarchy with full keyboard support, interactive scroll telemetry, and modal preview",
     ],
     image: "/projects/portfolio.svg",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     link: "https://github.com/agengwahid/porto-ageng",
   },
 ];
+
 

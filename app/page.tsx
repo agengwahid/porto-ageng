@@ -9,14 +9,14 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#090b10] text-zinc-100 flex flex-col selection:bg-sky-500/30 selection:text-sky-200">
+    <div className="min-h-screen bg-[#090a0f] text-zinc-100 flex flex-col selection:bg-orange-500/30 selection:text-orange-200">
       <Navbar />
       <main id="main-content" className="flex-1">
         <Hero />
-        <About />
-        <Projects />
-        <Certificates />
         <Skills />
+        <Projects />
+        <About />
+        <Certificates />
         <Contact />
       </main>
       <Footer />

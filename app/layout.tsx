@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Muhammad Ageng Zayem Wahid | Backend & Cloud Developer",
+  title: "Muhammad Ageng Zayem Wahid | Shinobi Developer Portfolio & Jonin Architect",
   description:
-    "Portfolio of Muhammad Ageng Zayem Wahid, an Informatics graduate (GPA 3.91/4.00) from Universitas Ahmad Dahlan and Bangkit Cloud Computing alumnus specializing in backend APIs and cloud systems.",
+    "Interactive portfolio of Muhammad Ageng Zayem Wahid: Backend & Cloud Developer (Informatics GPA 3.91, Bangkit Cloud Computing alumnus). Architecting resilient RESTful APIs, GCP infrastructure, and cyber-shinobi web systems.",
   keywords: [
     "Muhammad Ageng Zayem Wahid",
+    "Shinobi Developer Portfolio",
     "Backend Developer",
-    "Cloud Computing",
+    "Cloud Engineer",
     "Google Cloud Platform",
-    "Laravel",
     "Node.js",
+    "Laravel",
     "Informatics Portfolio",
   ],
 };
@@ -23,10 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased dark">
-      <body className="min-h-full flex flex-col bg-[#090b10] text-zinc-100 selection:bg-sky-500/30 selection:text-sky-200">
+      <body className="min-h-full flex flex-col bg-[#090a0f] text-zinc-100 selection:bg-orange-500/30 selection:text-orange-200">
         {children}
       </body>
     </html>
   );
 }
+
 

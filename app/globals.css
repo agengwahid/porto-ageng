@@ -1,27 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #090b10;
-  --surface: #0f141f;
-  --surface-raised: #151c2c;
-  --border: #1e2638;
-  --border-subtle: #161c29;
+  --background: #090a0f;
+  --surface: #0f1118;
+  --surface-raised: #161922;
+  --surface-overlay: #1d212d;
+  --border: #262b3a;
+  --border-subtle: #191c26;
+  --chakra-orange: #f97316;
+  --chakra-glow: rgba(249, 115, 22, 0.2);
+  --raiton-cyan: #06b6d4;
+  --raiton-glow: rgba(6, 182, 212, 0.2);
+  --parchment-gold: #f59e0b;
   --foreground: #f8fafc;
   --foreground-muted: #94a3b8;
-  --accent: #38bdf8;
-  --accent-muted: rgba(56, 189, 248, 0.12);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-mono: ui-monospace, SFMono-Regular, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #090b10;
+  background-color: #090a0f;
   color: #f8fafc;
 }
 
@@ -32,16 +36,49 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: 
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(249, 115, 22, 0.04) 0%, transparent 70%),
+    linear-gradient(rgba(249, 115, 22, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+  background-position: top center, center center, center center;
+}
+
+/* Shinobi Chakra Scanline Texture */
+.shinobi-scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
 }
 
 /* Accessible Keyboard Focus Ring (Antislop R-32) */
 :focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  outline: 2px solid var(--chakra-orange);
+  outline-offset: 3px;
 }
 
-/* Remove default outline only when focus-visible is handled */
 :focus:not(:focus-visible) {
   outline: none;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #232733;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
 
