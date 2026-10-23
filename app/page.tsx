@@ -7,12 +7,20 @@ import Certificates from "@/components/Certificates";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import ScrollKunai from "@/components/ScrollKunai";
+import KuramaBackground from "@/components/KuramaBackground";
+import SideNinjaScrollRails from "@/components/SideNinjaScrollRails";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#090a0f] text-zinc-100 flex flex-col selection:bg-orange-500/30 selection:text-orange-200 relative">
+    <div className="min-h-screen bg-[#070709] text-zinc-100 flex flex-col selection:bg-orange-500/30 selection:text-orange-200 relative overflow-x-hidden">
+      {/* Dynamic Animated Kurama Chakra Background */}
+      <KuramaBackground />
+
+      {/* Side Ninja Tool Scroll Rails (Shuriken Left, Kunai Right) */}
+      <SideNinjaScrollRails />
+
       <Navbar />
-      <main id="main-content" className="flex-1">
+      <main id="main-content" className="flex-1 relative z-10">
         <Hero />
         <Skills />
         <Projects />

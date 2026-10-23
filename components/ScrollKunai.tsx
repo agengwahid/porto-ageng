@@ -27,23 +27,24 @@ export default function ScrollKunai() {
 
   if (!visible) return null;
 
-  // Kunai rotation based on scroll depth (from -45deg pointing up to 45deg gliding)
+  // Kunai rotation based on scroll depth
   const kunaiRotation = -45 + (scrollProgress / 100) * 90;
 
   return (
-    <div
-      className="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-2 select-none"
-      style={{ filter: "drop-shadow(0 0 12px rgba(249, 115, 22, 0.25))" }}
+    <aside
+      aria-label="Navigasi cepat ke atas"
+      className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 flex flex-col items-center gap-1.5 select-none"
+      style={{ filter: "drop-shadow(0 0 14px rgba(249, 115, 22, 0.28))" }}
     >
       <button
         onClick={scrollToTop}
-        className="group relative flex items-center justify-center w-12 h-12 rounded-xl bg-[#0e111a]/95 border border-[#232a3d] hover:border-orange-500 hover:bg-orange-950/30 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-orange-500"
-        aria-label="Scroll to top with Kunai"
-        title="Return to top [Chakra Leap]"
+        className="group relative flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#0d0d11]/95 border border-[#22222a] hover:border-orange-500 hover:bg-orange-950/40 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-orange-500"
+        aria-label="Kembali ke bagian atas halaman"
+        title="Kembali ke atas"
       >
         {/* Dynamic spinning chakra background ring */}
         <div
-          className="absolute inset-0 rounded-xl border border-orange-500/20 group-hover:border-orange-500/60 transition"
+          className="absolute inset-0 rounded-xl border border-orange-500/25 group-hover:border-orange-500/70 transition"
           style={{
             transform: `rotate(${scrollProgress * 3.6}deg)`,
             transition: "transform 0.1s linear",
@@ -55,7 +56,7 @@ export default function ScrollKunai() {
           viewBox="0 0 48 48"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 transition-transform duration-150"
+          className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-150"
           style={{ transform: `rotate(${kunaiRotation}deg)` }}
           aria-hidden="true"
         >
@@ -72,27 +73,26 @@ export default function ScrollKunai() {
           {/* Kunai Blade Body */}
           <path
             d="M20 18L22 28H26L28 18H20Z"
-            fill="#38bdf8"
-            className="group-hover:fill-cyan-300 transition"
+            fill="#eab308"
           />
           {/* Handle */}
-          <rect x="23" y="28" width="2" height="10" fill="#94a3b8" />
-          <line x1="22" y1="30" x2="26" y2="30" stroke="#f97316" strokeWidth="1" />
-          <line x1="22" y1="33" x2="26" y2="33" stroke="#f97316" strokeWidth="1" />
-          <line x1="22" y1="36" x2="26" y2="36" stroke="#f97316" strokeWidth="1" />
+          <rect x="23" y="28" width="2" height="10" fill="#a1a1aa" />
+          <line x1="22" y1="30" x2="26" y2="30" stroke="#ea580c" strokeWidth="1" />
+          <line x1="22" y1="33" x2="26" y2="33" stroke="#ea580c" strokeWidth="1" />
+          <line x1="22" y1="36" x2="26" y2="36" stroke="#ea580c" strokeWidth="1" />
           {/* Ring Pommel */}
-          <circle cx="24" cy="42" r="3.5" stroke="#94a3b8" strokeWidth="2" fill="none" />
+          <circle cx="24" cy="42" r="3.5" stroke="#a1a1aa" strokeWidth="2" fill="none" />
         </svg>
 
         {/* Glowing chakra beacon dot */}
-        <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-orange-500 animate-ping" />
-        <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-orange-400" />
+        <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-orange-500 animate-ping" />
+        <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-orange-400" />
       </button>
 
       {/* Telemetry scroll depth readout */}
-      <div className="px-2 py-0.5 rounded bg-[#0e111a]/90 border border-[#232a3d] text-[10px] font-mono text-orange-400 font-semibold tracking-wider">
+      <div className="px-2 py-0.5 rounded-md bg-[#0d0d11]/90 border border-[#22222a] text-[10px] font-mono text-orange-400 font-semibold tracking-wider">
         {Math.round(scrollProgress)}%
       </div>
-    </div>
+    </aside>
   );
 }

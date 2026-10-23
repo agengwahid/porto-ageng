@@ -12,7 +12,7 @@ export default function About() {
     {
       period: "2023 - 2025",
       badge: "2 TAHUN PENGALAMAN",
-      badgeColor: "border-cyan-500/50 text-cyan-300 bg-cyan-950/40",
+      badgeColor: "border-amber-500/50 text-amber-300 bg-amber-950/40",
       title: "Asisten Praktikum Laboratorium Komputer Informatika",
       organization: "Laboratorium Informatika, Universitas Ahmad Dahlan",
       description:
@@ -21,7 +21,7 @@ export default function About() {
     {
       period: "2022 - 2026",
       badge: "IPK 3.91 / 4.00",
-      badgeColor: "border-amber-500/50 text-amber-300 bg-amber-950/40",
+      badgeColor: "border-orange-500/50 text-orange-400 bg-orange-950/40",
       title: "S1 Informatika (Lulus Akselerasi 3.5 Tahun)",
       organization: "Universitas Ahmad Dahlan (UAD) · Yogyakarta",
       description:
@@ -30,7 +30,7 @@ export default function About() {
     {
       period: "2023 - 2024",
       badge: "ORGANISASI MAHASISWA",
-      badgeColor: "border-zinc-700 text-zinc-300 bg-[#151926]",
+      badgeColor: "border-[#22222a] text-zinc-300 bg-[#131318]",
       title: "Staf Bidang Ilmu Pengetahuan & Teknologi (IPTEK)",
       organization: "HMIF Universitas Ahmad Dahlan",
       description:
@@ -39,7 +39,7 @@ export default function About() {
     {
       period: "2019 - 2022",
       badge: "PENDIDIKAN AWAL",
-      badgeColor: "border-zinc-700 text-zinc-400 bg-[#151926]",
+      badgeColor: "border-[#22222a] text-zinc-400 bg-[#131318]",
       title: "SMA Negeri 1 Lebong",
       organization: "Jurusan Matematika dan Ilmu Pengetahuan Alam (MIPA)",
       description:
@@ -48,10 +48,10 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 md:py-32 px-6 border-b border-[#232a3d] relative">
+    <section id="about" className="py-20 md:py-32 px-4 sm:px-6 border-b border-[#22222a] relative">
       <div className="max-w-7xl mx-auto">
         {/* SECTION HEADER */}
-        <div className="mb-16">
+        <div className="mb-12 sm:mb-16">
           <div className="flex items-center gap-2 font-mono text-xs text-orange-400 uppercase tracking-widest mb-3">
             <span>03</span>
             <span>//</span>
@@ -66,28 +66,28 @@ export default function About() {
                 Rekam jejak terverifikasi mulai dari kelulusan akselerasi S1 Informatika (IPK 3.91), program Cloud Computing Bangkit Academy (Google), hingga 2 tahun membimbing 100+ mahasiswa di laboratorium.
               </p>
             </div>
-            <div className="font-mono text-xs text-zinc-400 border border-[#232a3d] px-3 py-1.5 rounded-lg bg-[#0e111a]">
+            <div className="font-mono text-xs text-zinc-400 border border-[#22222a] px-3 py-1.5 rounded-lg bg-[#0d0d11]">
               TRACK: ACCELERATED_HONORS
             </div>
           </div>
         </div>
 
         {/* TWO-COLUMN LAYOUT: NARRATIVE & CHRONOLOGY TRACK */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* LEFT COLUMN: THE ENGINEERING VALUES (5 COLS) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 rounded-2xl bg-[#0e111a] border border-[#232a3d] shadow-lg">
+            <div className="p-5 sm:p-7 rounded-2xl bg-[#0d0d11] border border-[#22222a] shadow-lg">
               <span className="text-xs font-mono text-orange-400 tracking-wider uppercase font-semibold">
                 PRINSIP REKAYASA SISTEM
               </span>
-              <h3 className="text-xl font-bold text-white mt-2">
+              <h3 className="text-lg sm:text-xl font-bold text-white mt-2">
                 Kecepatan, Ketahanan, dan Struktur Bersih
               </h3>
               <p className="mt-3 text-sm text-zinc-300 leading-relaxed">
                 Bagi seorang backend engineer, keunggulan sejati berada pada apa yang tidak kasat mata: latency milidetik, handling lonjakan trafik secara mulus, dan integritas data tanpa kompromi.
               </p>
 
-              <div className="mt-6 pt-5 border-t border-[#232a3d] space-y-4">
+              <div className="mt-6 pt-5 border-t border-[#22222a] space-y-4">
                 <div className="flex items-start gap-3">
                   <span className="text-orange-400 text-base mt-0.5">⚡</span>
                   <div>
@@ -99,7 +99,7 @@ export default function About() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="text-cyan-400 text-base mt-0.5">⛰️</span>
+                  <span className="text-amber-400 text-base mt-0.5">⛰️</span>
                   <div>
                     <h4 className="text-sm font-semibold text-white">Integritas Data Relasional</h4>
                     <p className="text-xs text-zinc-400 mt-0.5">
@@ -109,7 +109,7 @@ export default function About() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="text-amber-400 text-base mt-0.5">📜</span>
+                  <span className="text-orange-400 text-base mt-0.5">📜</span>
                   <div>
                     <h4 className="text-sm font-semibold text-white">Transfer Pengetahuan & Mentoring</h4>
                     <p className="text-xs text-zinc-400 mt-0.5">
@@ -128,16 +128,16 @@ export default function About() {
           </div>
 
           {/* RIGHT COLUMN: INTERACTIVE CHRONICLES TIMELINE (7 COLS) */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             {chronicles.map((item, idx) => (
               <div
                 key={idx}
-                className="relative pl-6 sm:pl-8 border-l-2 border-[#232a3d] hover:border-orange-500 transition duration-200 group pb-4 last:pb-0"
+                className="relative pl-5 sm:pl-8 border-l-2 border-[#22222a] hover:border-orange-500 transition duration-200 group pb-3 sm:pb-4 last:pb-0"
               >
                 {/* TIMELINE NODE DOT */}
-                <span className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#151926] border-2 border-orange-400 group-hover:bg-orange-500 group-hover:scale-110 transition duration-200 shadow-[0_0_10px_rgba(249,115,22,0.4)]" />
+                <span className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#131318] border-2 border-orange-400 group-hover:bg-orange-500 group-hover:scale-110 transition duration-200 shadow-[0_0_10px_rgba(249,115,22,0.4)]" />
 
-                <div className="p-5 sm:p-6 rounded-2xl bg-[#0e111a] border border-[#232a3d] group-hover:border-[#384055] transition duration-200 shadow-md">
+                <div className="p-4 sm:p-6 rounded-2xl bg-[#0d0d11] border border-[#22222a] group-hover:border-[#33333d] transition duration-200 shadow-md">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <span className="font-mono text-xs font-bold text-orange-400">
                       {item.period}
@@ -151,7 +151,7 @@ export default function About() {
                     {item.title}
                   </h4>
 
-                  <p className="text-xs font-mono text-cyan-300/90 mt-1">
+                  <p className="text-xs font-mono text-amber-300/90 mt-1">
                     {item.organization}
                   </p>
 
