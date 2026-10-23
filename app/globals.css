@@ -2,15 +2,15 @@
 
 :root {
   --background: #090a0f;
-  --surface: #0f1118;
-  --surface-raised: #161922;
-  --surface-overlay: #1d212d;
-  --border: #262b3a;
-  --border-subtle: #191c26;
+  --surface: #0e111a;
+  --surface-raised: #151926;
+  --surface-overlay: #1c2233;
+  --border: #232a3d;
+  --border-subtle: #171d2c;
   --chakra-orange: #f97316;
-  --chakra-glow: rgba(249, 115, 22, 0.2);
+  --chakra-glow: rgba(249, 115, 22, 0.25);
   --raiton-cyan: #06b6d4;
-  --raiton-glow: rgba(6, 182, 212, 0.2);
+  --raiton-glow: rgba(6, 182, 212, 0.25);
   --parchment-gold: #f59e0b;
   --foreground: #f8fafc;
   --foreground-muted: #94a3b8;
@@ -36,24 +36,10 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: 
-    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(249, 115, 22, 0.04) 0%, transparent 70%),
-    linear-gradient(rgba(249, 115, 22, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.015) 1px, transparent 1px);
-  background-size: 100% 100%, 48px 48px, 48px 48px;
-  background-position: top center, center center, center center;
-}
-
-/* Shinobi Chakra Scanline Texture */
-.shinobi-scanlines {
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.15) 1px,
-    transparent 1px,
-    transparent 2px
-  );
-  pointer-events: none;
+  /* Crystal-crisp geometric micro-dot grid for high-tech aesthetic without blurriness */
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0;
 }
 
 /* Accessible Keyboard Focus Ring (Antislop R-32) */
@@ -66,7 +52,7 @@ body {
   outline: none;
 }
 
-/* Custom Scrollbar */
+/* Custom Sleek Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -74,11 +60,76 @@ body {
   background: #090a0f;
 }
 ::-webkit-scrollbar-thumb {
-  background: #232733;
+  background: #232a3d;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #f97316;
+}
+
+/* Chakra & Kunai Animation Keyframes */
+@keyframes chakra-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.2), inset 0 0 15px rgba(249, 115, 22, 0.1);
+    border-color: rgba(249, 115, 22, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(249, 115, 22, 0.4), inset 0 0 25px rgba(249, 115, 22, 0.2);
+    border-color: rgba(249, 115, 22, 0.9);
+  }
+}
+
+@keyframes chakra-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
+@keyframes kunai-glide {
+  0%, 100% {
+    transform: translateY(0px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-40deg);
+  }
+}
+
+@keyframes chakra-glow-breath {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.04);
+  }
+}
+
+.animate-chakra-pulse {
+  animation: chakra-pulse 3s ease-in-out infinite;
+}
+
+.animate-chakra-float {
+  animation: chakra-float 4s ease-in-out infinite;
+}
+
+.animate-kunai-glide {
+  animation: kunai-glide 3.5s ease-in-out infinite;
+}
+
+.animate-chakra-breath {
+  animation: chakra-glow-breath 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 

@@ -59,26 +59,26 @@ const affinities: ElementalAffinity[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 md:py-32 px-6 border-b border-[#262b3a] relative">
+    <section id="skills" className="py-24 md:py-32 px-6 border-b border-[#232a3d] relative">
       <div className="max-w-7xl mx-auto">
-        {/* SECTION HEADER (PRD Section 4) */}
+        {/* SECTION HEADER */}
         <div className="mb-16">
           <div className="flex items-center gap-2 font-mono text-xs text-orange-400 uppercase tracking-widest mb-3">
             <span>01</span>
             <span>//</span>
-            <span>NINJUTSU CODEX & ELEMENTAL AFFINITIES</span>
+            <span>KEAHLIAN TEKNIS & STACK ARSITEKTUR</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
               <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-                Elemental Stacks & Technical Jutsu
+                Kompetensi Inti & Pilar Teknologi
               </h2>
-              <p className="text-zinc-400 mt-3 text-sm sm:text-base max-w-2xl leading-relaxed">
-                Categorized by elemental nature: Lightning (APIs & Backend), Earth (GCP Cloud Systems), Sealing (Relational & NoSQL Databases), and Wind (Collaboration & Mentorship).
+              <p className="text-zinc-300 mt-3 text-sm sm:text-base max-w-2xl leading-relaxed">
+                Dikelompokkan berdasarkan 4 pilar arsitektur: Lightning/Raiton (API & Backend), Earth/Doton (Sistem Cloud GCP), Sealing/Fuinjutsu (Database Relasional & NoSQL), dan Wind/Futon (Tools & Kepemimpinan Teknis).
               </p>
             </div>
-            <div className="font-mono text-xs text-zinc-500 border border-[#262b3a] px-3 py-1.5 rounded bg-[#111319]">
-              SYS: 4_ELEMENTS_ACTIVE
+            <div className="font-mono text-xs text-zinc-400 border border-[#232a3d] px-3 py-1.5 rounded-lg bg-[#0e111a]">
+              STATUS: 4_STACKS_ACTIVE
             </div>
           </div>
         </div>
@@ -88,13 +88,13 @@ export default function Skills() {
           {affinities.map((item, idx) => (
             <div
               key={idx}
-              className={`rounded-2xl bg-[#0f1118] border border-[#262b3a] ${item.borderGlow} transition-all duration-300 p-6 sm:p-8 flex flex-col justify-between group`}
+              className={`rounded-2xl bg-[#0e111a] border border-[#232a3d] ${item.borderGlow} transition-all duration-300 p-6 sm:p-8 flex flex-col justify-between group hover:-translate-y-1`}
             >
               <div>
                 {/* HEADER OF CARD WITH KANJI STAMP */}
                 <div className="flex items-start justify-between gap-4 mb-4">
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl p-2 rounded-lg bg-[#161922] border border-[#262b3a]">
+                    <span className="text-2xl p-2.5 rounded-xl bg-[#151926] border border-[#232a3d]">
                       {item.icon}
                     </span>
                     <div>
@@ -118,9 +118,9 @@ export default function Skills() {
               </div>
 
               {/* TECHNIQUES BADGE LIST */}
-              <div className="mt-8 pt-5 border-t border-[#262b3a]/60">
-                <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-3">
-                  MASTERY TECHNIQUES:
+              <div className="mt-8 pt-5 border-t border-[#232a3d]">
+                <p className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest mb-3">
+                  TEKNOLOGI & TOOLS:
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {item.techniques.map((tech, tIdx) => (
