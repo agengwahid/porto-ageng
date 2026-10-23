@@ -1,112 +1,121 @@
 export default function About() {
   return (
-    <section id="about" className="py-28 px-6">
+    <section id="about" className="py-24 md:py-32 px-6 border-b border-[#1e2638]">
       <div className="max-w-7xl mx-auto">
-        {/* TITLE */}
+        {/* SECTION HEADER (Antislop R-05, R-06) */}
         <div className="mb-16">
-          <p className="text-cyan-400 font-medium mb-3">ABOUT ME</p>
-          <h2 className="text-4xl md:text-5xl font-bold">Get To Know Me</h2>
+          <div className="flex items-center gap-2 font-mono text-xs text-sky-400 uppercase tracking-widest mb-3">
+            <span>01</span>
+            <span>/</span>
+            <span>BACKGROUND & EXPERIENCE</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+            Engineering foundation grounded in academic rigor and cloud practice
+          </h2>
         </div>
 
-        {/* CONTENT */}
-        <div className="grid md:grid-cols-2 gap-14">
-          {/* LEFT */}
-          <div>
-            <p className="text-gray-400 leading-relaxed text-lg">
-              Bachelor of Informatics graduate from Ahmad Dahlan University
-              with a GPA of 3.91/4.00, completed in 3.5 years. Passionate
-              about backend development, cloud computing, and web
-              application development.
+        {/* TWO-COLUMN GRID */}
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+          {/* LEFT COLUMN: DETAILED NARRATIVE (7 COLS) */}
+          <div className="lg:col-span-7 space-y-6 text-zinc-300 leading-relaxed text-base">
+            <p>
+              I am an Informatics graduate from <strong className="text-white font-medium">Universitas Ahmad Dahlan (UAD)</strong> who completed my bachelor degree in 3.5 years with a <strong className="text-white font-medium">GPA of 3.91/4.00</strong>. My academic journey provided a rigorous foundation in algorithms, relational data structures, system design, and software engineering principles.
             </p>
 
-            <p className="text-gray-400 leading-relaxed text-lg mt-6">
-              Experienced as a Teaching Assistant and a graduate of the MSIB
-              Bangkit Academy (Cloud Computing) program. A collaborative and
-              analytical individual with strong problem-solving skills,
-              eager to contribute to developing scalable and reliable
-              software solutions.
+            <p>
+              During my studies, I was selected for the prestigious <strong className="text-white font-medium">MSIB Bangkit Academy 2024 (Cloud Computing track)</strong> led by Google, GoTo, and Traveloka. Through Bangkit, I honed deep hands-on expertise with Google Cloud Platform (Compute Engine, Cloud Run, Cloud Storage, Firestore), deploying containerized Node.js microservices and integrating machine learning inference pipelines.
             </p>
 
-            {/* EDUCATION */}
-            <div className="mt-10">
-              <h3 className="text-xl font-semibold text-white mb-4">
-                Education
-              </h3>
-              <div className="space-y-4">
-                <div className="border-l-2 border-cyan-400 pl-4">
-                  <p className="font-medium text-white">
-                    Ahmad Dahlan University (UAD)
-                  </p>
-                  <p className="text-gray-400 text-sm">
-                    Bachelor of Informatics · GPA 3.91/4.00 · 2022 – 2026
-                  </p>
-                </div>
-                <div className="border-l-2 border-gray-700 pl-4">
-                  <p className="font-medium text-white">
-                    SMA Negeri 1 Lebong
-                  </p>
-                  <p className="text-gray-400 text-sm">
-                    Science Major · 2019 – 2022
-                  </p>
-                </div>
+            <p>
+              Beyond coursework, I dedicated two years as a <strong className="text-white font-medium">Computer Laboratory Teaching Assistant</strong> at UAD. I mentored hundreds of undergraduate students in Programming Algorithms, Computer Logic, and Operating Systems, strengthening both my communication and technical debugging abilities.
+            </p>
+
+            {/* CORE TECHNICAL PRINCIPLES */}
+            <div className="pt-6 mt-6 border-t border-[#1e2638] grid sm:grid-cols-2 gap-4">
+              <div className="p-4 rounded-xl bg-[#0f141f] border border-[#1e2638]">
+                <h3 className="font-mono text-xs font-semibold text-sky-400 uppercase tracking-wider">
+                  System Architecture
+                </h3>
+                <p className="mt-2 text-sm text-zinc-300">
+                  Focus on normalized schemas, clean RESTful API contracts, and predictable error handling.
+                </p>
+              </div>
+              <div className="p-4 rounded-xl bg-[#0f141f] border border-[#1e2638]">
+                <h3 className="font-mono text-xs font-semibold text-sky-400 uppercase tracking-wider">
+                  Cloud Infrastructure
+                </h3>
+                <p className="mt-2 text-sm text-zinc-300">
+                  Experience deploying microservices on GCP with automated CI/CD and production monitoring.
+                </p>
               </div>
             </div>
           </div>
 
-          {/* RIGHT */}
-          <div>
-            <div className="grid grid-cols-2 gap-6 mb-10">
-              <div className="bg-[#111827] p-6 rounded-2xl border border-gray-800">
-                <h3 className="text-3xl font-bold text-cyan-400">3.91</h3>
-                <p className="text-gray-400 mt-2">GPA / 4.00</p>
-              </div>
+          {/* RIGHT COLUMN: CHRONOLOGY TRACK (5 COLS) */}
+          <div className="lg:col-span-5 space-y-8">
+            {/* EDUCATION */}
+            <div>
+              <h3 className="font-mono text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4">
+                Education
+              </h3>
+              <div className="space-y-4">
+                <div className="p-4 rounded-xl bg-[#0f141f] border border-[#1e2638]">
+                  <div className="flex items-center justify-between text-xs font-mono text-sky-400 mb-1">
+                    <span>2022 - 2026 (3.5 Years)</span>
+                    <span className="text-emerald-400">GPA 3.91/4.00</span>
+                  </div>
+                  <h4 className="text-base font-semibold text-white">
+                    Universitas Ahmad Dahlan (UAD)
+                  </h4>
+                  <p className="text-sm text-zinc-400 mt-1">
+                    Bachelor of Informatics · Yogyakarta, Indonesia
+                  </p>
+                </div>
 
-              <div className="bg-[#111827] p-6 rounded-2xl border border-gray-800">
-                <h3 className="text-3xl font-bold text-cyan-400">17+</h3>
-                <p className="text-gray-400 mt-2">Certificates Earned</p>
-              </div>
-
-              <div className="bg-[#111827] p-6 rounded-2xl border border-gray-800">
-                <h3 className="text-3xl font-bold text-cyan-400">4+</h3>
-                <p className="text-gray-400 mt-2">Projects Completed</p>
-              </div>
-
-              <div className="bg-[#111827] p-6 rounded-2xl border border-gray-800">
-                <h3 className="text-3xl font-bold text-cyan-400">2</h3>
-                <p className="text-gray-400 mt-2">Years as Teaching Asst.</p>
+                <div className="p-4 rounded-xl bg-[#0f141f] border border-[#1e2638]">
+                  <div className="text-xs font-mono text-zinc-400 mb-1">
+                    2019 - 2022
+                  </div>
+                  <h4 className="text-base font-semibold text-white">
+                    SMA Negeri 1 Lebong
+                  </h4>
+                  <p className="text-sm text-zinc-400 mt-1">
+                    Natural Sciences (MIPA) · Bengkulu, Indonesia
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* EXPERIENCE */}
+            {/* LEADERSHIP & TEACHING */}
             <div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                Experience
+              <h3 className="font-mono text-xs font-bold text-zinc-400 uppercase tracking-widest mb-4">
+                Experience & Academic Service
               </h3>
-              <div className="space-y-5">
-                <div className="border-l-2 border-cyan-400 pl-4">
-                  <p className="font-medium text-white">
-                    Teaching Assistant — Informatics Laboratory, UAD
-                  </p>
-                  <p className="text-gray-500 text-sm">2023 – 2025</p>
-                  <p className="text-gray-400 text-sm mt-1">
-                    Assisted lab sessions for Introduction to Programming,
-                    Programming Algorithms, Informatics Logic, and Operating
-                    Systems.
+              <div className="space-y-3">
+                <div className="p-4 rounded-xl bg-[#0f141f] border border-[#1e2638]">
+                  <div className="flex items-center justify-between text-xs font-mono text-sky-400 mb-1">
+                    <span>2023 - 2025</span>
+                    <span>Laboratory</span>
+                  </div>
+                  <h4 className="text-sm font-semibold text-white">
+                    Teaching Assistant: Informatics Computer Laboratory
+                  </h4>
+                  <p className="text-xs text-zinc-400 mt-1 leading-relaxed">
+                    Guided lab practicums for Programming Logic, Algorithms, and Operating Systems for over 100 students.
                   </p>
                 </div>
 
-                <div className="border-l-2 border-gray-700 pl-4">
-                  <p className="font-medium text-white">
-                    Staff of Science and Technology Department — HMIF
+                <div className="p-4 rounded-xl bg-[#0f141f] border border-[#1e2638]">
+                  <div className="flex items-center justify-between text-xs font-mono text-zinc-400 mb-1">
+                    <span>2023 - 2024</span>
+                    <span>Student Body</span>
+                  </div>
+                  <h4 className="text-sm font-semibold text-white">
+                    Science & Technology Staff: HMIF UAD
+                  </h4>
+                  <p className="text-xs text-zinc-400 mt-1">
+                    Organized department workshops and technical development events for informatics students.
                   </p>
-                  <p className="text-gray-500 text-sm">2023 – 2024</p>
-                </div>
-
-                <div className="border-l-2 border-gray-700 pl-4">
-                  <p className="font-medium text-white">
-                    Steering Committee, Informatics Week — UAD
-                  </p>
-                  <p className="text-gray-500 text-sm">2024</p>
                 </div>
               </div>
             </div>
@@ -116,3 +125,4 @@ export default function About() {
     </section>
   );
 }
+

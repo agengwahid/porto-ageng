@@ -1,6 +1,6 @@
 export const certificates = [
   {
-    title: "Bangkit Academy 2024 — Cloud Computing (Full Graduate)",
+    title: "Bangkit Academy 2024: Cloud Computing (Full Graduate)",
     issuer: "Bangkit Academy · Google, GoTo, Traveloka",
     date: "Jan 2025",
     image: "/certificates/bangkit.jpg",
@@ -77,28 +77,28 @@ export const certificates = [
     category: "Dicoding",
   },
   {
-    title: "Lulusan Tepat Waktu — S1 Informatika",
+    title: "Lulusan Tepat Waktu: S1 Informatika",
     issuer: "Universitas Ahmad Dahlan",
     date: "Mei 2026",
     image: "/certificates/lulus_tepat_waktu.jpg",
     category: "Kampus",
   },
   {
-    title: "Staff Departemen Ilmu Pengetahuan dan Teknologi — HMIF",
+    title: "Staff Departemen Ilmu Pengetahuan dan Teknologi: HMIF",
     issuer: "Himpunan Mahasiswa Informatika, Universitas Ahmad Dahlan",
     date: "2023/2024",
     image: "/certificates/hmif_staff.jpg",
     category: "Organisasi",
   },
   {
-    title: "Asisten Praktikum — Dasar Pemrograman",
+    title: "Asisten Praktikum: Dasar Pemrograman",
     issuer: "Laboratorium Komputer S1 Informatika, UAD",
     date: "Feb 2024",
     image: "/certificates/asisten_dasar.jpg",
     category: "Kampus",
   },
   {
-    title: "Asisten Praktikum — Logika Informatika",
+    title: "Asisten Praktikum: Logika Informatika",
     issuer: "Laboratorium Komputer S1 Informatika, UAD",
     date: "Feb 2024",
     image: "/certificates/asisten_logika.jpg",
@@ -119,3 +119,4 @@ export const certificates = [
     category: "Kampus",
   },
 ];
+
