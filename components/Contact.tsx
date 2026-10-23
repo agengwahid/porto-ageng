@@ -1,75 +1,123 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Contact() {
+  const [copied, setCopied] = useState(false);
+  const email = "agngwahid123@gmail.com";
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
+
   return (
-    <section id="contact" className="py-28 px-6 bg-[#09101d]">
-      <div className="max-w-4xl mx-auto text-center">
-        <p className="text-cyan-400 font-medium mb-3">GET IN TOUCH</p>
-        <h2 className="text-4xl md:text-5xl font-bold">Let&apos;s Work Together</h2>
-
-        <p className="text-gray-400 leading-relaxed mt-6 max-w-2xl mx-auto">
-          I&apos;m open to backend, cloud, and web development opportunities.
-          Feel free to reach out — I usually reply within a day.
-        </p>
-
-        <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
-          <a
-            href="mailto:agngwahid123@gmail.com"
-            className="px-6 py-3 bg-cyan-400 text-black rounded-xl font-semibold hover:bg-cyan-300 transition duration-300"
-          >
-            Email Me
-          </a>
-
-          <a
-            href="/cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 border border-gray-600 rounded-xl hover:bg-white hover:text-black transition duration-300"
-          >
-            Download CV
-          </a>
-        </div>
-
-        <div className="grid sm:grid-cols-3 gap-6 mt-14 text-left">
-          <a
-            href="mailto:agngwahid123@gmail.com"
-            className="bg-[#111827] p-5 rounded-2xl border border-gray-800 hover:border-cyan-400 transition"
-          >
-            <p className="text-gray-500 text-sm">Email</p>
-            <p className="text-white mt-1 break-all">agngwahid123@gmail.com</p>
-          </a>
-
-          <a
-            href="tel:+6282178040716"
-            className="bg-[#111827] p-5 rounded-2xl border border-gray-800 hover:border-cyan-400 transition"
-          >
-            <p className="text-gray-500 text-sm">Phone</p>
-            <p className="text-white mt-1">+62 821-7804-0716</p>
-          </a>
-
-          <div className="bg-[#111827] p-5 rounded-2xl border border-gray-800">
-            <p className="text-gray-500 text-sm">Location</p>
-            <p className="text-white mt-1">Yogyakarta, Indonesia</p>
+    <section id="contact" className="py-24 md:py-32 px-6 border-b border-[#1e2638]">
+      <div className="max-w-5xl mx-auto">
+        {/* SECTION HEADER */}
+        <div className="mb-14 text-center max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 font-mono text-xs text-sky-400 uppercase tracking-widest mb-3">
+            <span>05</span>
+            <span>/</span>
+            <span>DIRECT COMMUNICATION</span>
           </div>
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+            Let&apos;s Build Something Reliable
+          </h2>
+          <p className="text-zinc-300 mt-4 text-sm sm:text-base leading-relaxed">
+            I am currently open to full-time Backend Developer and Cloud Engineer positions, contract engagements, or engineering collaborations. Reach out directly and I will respond within 24 hours.
+          </p>
         </div>
 
-        <div className="flex items-center justify-center gap-6 mt-10 text-gray-400">
-          <a
-            href="https://github.com/agengwahid"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/ageng14"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-          >
-            LinkedIn
-          </a>
+        {/* INTERACTIVE COMMUNICATION CONSOLE CARD */}
+        <div className="rounded-2xl bg-[#0f141f] border border-[#1e2638] p-6 sm:p-10 shadow-xl">
+          <div className="grid lg:grid-cols-12 gap-8 items-center">
+            {/* PRIMARY EMAIL ACTION */}
+            <div className="lg:col-span-7 space-y-4">
+              <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider">
+                Primary Contact Endpoint:
+              </span>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <div className="px-4 py-3 rounded-lg bg-[#090b10] border border-[#232c3f] font-mono text-sm text-sky-300 flex-1 truncate">
+                  {email}
+                </div>
+                <button
+                  onClick={handleCopy}
+                  className="px-5 py-3 rounded-lg bg-sky-400 text-zinc-950 font-semibold text-xs font-mono uppercase tracking-wider hover:bg-sky-300 transition duration-150 flex items-center justify-center gap-2"
+                >
+                  {copied ? (
+                    <>
+                      <span className="text-emerald-950 font-bold">✓</span>
+                      <span>Copied!</span>
+                    </>
+                  ) : (
+                    <span>Copy Email</span>
+                  )}
+                </button>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a
+                  href={`mailto:${email}`}
+                  className="px-4 py-2 rounded-lg bg-[#151c2c] border border-[#232c3f] text-xs font-mono text-zinc-300 hover:text-white hover:border-zinc-500 transition"
+                >
+                  Open in Email Client ↗
+                </a>
+                <a
+                  href="/cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg bg-[#151c2c] border border-[#232c3f] text-xs font-mono text-zinc-300 hover:text-white hover:border-zinc-500 transition"
+                >
+                  Inspect Resume (PDF) ↗
+                </a>
+              </div>
+            </div>
+
+            {/* DIRECT CHANNELS & METADATA */}
+            <div className="lg:col-span-5 lg:border-l lg:border-[#1e2638] lg:pl-8 space-y-4 text-xs font-mono">
+              <div>
+                <p className="text-zinc-400">PHONE & WHATSAPP</p>
+                <a
+                  href="tel:+6282178040716"
+                  className="text-white hover:text-sky-300 transition mt-1 inline-block text-sm"
+                >
+                  +62 821-7804-0716
+                </a>
+              </div>
+
+              <div>
+                <p className="text-zinc-400">BASE LOCATION</p>
+                <p className="text-zinc-200 mt-1">Yogyakarta, Indonesia (WIB / UTC+7)</p>
+              </div>
+
+              <div>
+                <p className="text-zinc-400">PROFILES & NETWORKS</p>
+                <div className="flex items-center gap-4 mt-1.5 text-zinc-300">
+                  <a
+                    href="https://github.com/agengwahid"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-sky-400 transition"
+                  >
+                    GitHub ↗
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/ageng14"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-sky-400 transition"
+                  >
+                    LinkedIn ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
