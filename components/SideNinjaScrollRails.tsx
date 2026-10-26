@@ -74,9 +74,9 @@ export default function SideNinjaScrollRails() {
             <circle cx="20" cy="20" r="3.5" fill="#070709" stroke="#ea580c" strokeWidth="1.5" />
           </svg>
 
-          {/* Vertical Kanji Tag */}
+          {/* Vertical Progress Tag */}
           <span className="text-[9px] font-mono font-bold text-orange-400/70 tracking-widest uppercase mt-0.5">
-            手裏剣
+            SCROLL
           </span>
         </div>
       </div>
