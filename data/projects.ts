@@ -2,7 +2,7 @@ export interface Project {
   title: string;
   codename: string;
   rank: string;
-  rankBadge: "S-RANK" | "A-RANK" | "B-RANK";
+  rankBadge: string;
   period: string;
   role: string;
   description: string;
@@ -16,11 +16,11 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "DermaScan: Skin Disease Detection Platform",
-    codename: "OPERATION_DERMASCAN",
-    rank: "S-Rank Classified Mission",
-    rankBadge: "S-RANK",
+    codename: "HEALTHCARE_ML_API",
+    rank: "Capstone Project",
+    rankBadge: "CAPSTONE · CLOUD",
     period: "2024 · Bangkit Academy Capstone",
-    role: "Backend & Cloud Architect",
+    role: "Backend & Cloud Engineer",
     featured: true,
     description:
       "Engineered secure, high-throughput RESTful APIs using Node.js to power a machine-learning-assisted skin disease detection mobile application. Connected image inference endpoints with Google Cloud Platform infrastructure for automated predictions and data storage.",
@@ -35,11 +35,11 @@ export const projects: Project[] = [
   },
   {
     title: "Student Grade Management System",
-    codename: "OPERATION_ACADEMIC_SEAL",
-    rank: "A-Rank Mission",
-    rankBadge: "A-RANK",
+    codename: "ACADEMIC_PORTAL",
+    rank: "Production System",
+    rankBadge: "PRODUCTION · ENTERPRISE",
     period: "2026 · SMK Negeri 1 Lebong",
-    role: "Fullstack Jonin Developer",
+    role: "Fullstack Web Developer",
     featured: true,
     description:
       "Architected and deployed a centralized academic grading and student record system for SMK Negeri 1 Lebong. Replaced error-prone manual spreadsheets with role-based access control, indexed relational schemas, and an administrative telemetry dashboard.",
@@ -54,10 +54,10 @@ export const projects: Project[] = [
   },
   {
     title: "Kost Panjie Resident & Property Portal",
-    codename: "OPERATION_ESTATE_CODEX",
-    rank: "A-Rank Mission",
-    rankBadge: "A-RANK",
-    period: "2024 · Client Mission",
+    codename: "PROPERTY_PORTAL",
+    rank: "Client Web Application",
+    rankBadge: "CLIENT PROJECT",
+    period: "2024 · Client Project",
     role: "Fullstack Web Developer",
     description:
       "Engineered an automated property and resident management application for Kost Panjie. Centralized resident contracts, room occupancy states, and monthly accounting logs into an intuitive web interface.",
@@ -71,17 +71,17 @@ export const projects: Project[] = [
     link: "https://github.com/agengwahid",
   },
   {
-    title: "Shinobi Developer Portfolio & Interactive Codex",
-    codename: "OPERATION_CHAKRA_SHOWCASE",
-    rank: "B-Rank Mission",
-    rankBadge: "B-RANK",
+    title: "Personal Developer Portfolio & Interactive Showcase",
+    codename: "PORTFOLIO_SYSTEM",
+    rank: "Personal Project",
+    rankBadge: "PERSONAL PROJECT",
     period: "2025 · Personal Platform",
-    role: "Frontend Architect",
+    role: "Frontend & Web Architect",
     description:
-      "Constructed a cyber-shinobi developer portfolio combining authentic engineering achievements (GPA 3.91, GCP certification) with immersive Konoha HUD telemetry. Built with Next.js, React, and strict accessibility standards.",
+      "Constructed a high-performance developer portfolio showcasing engineering achievements (GPA 3.91, GCP certification) with interactive dashboard telemetry. Built with Next.js App Router, React, and strict accessibility standards.",
     highlights: [
       "Built with Next.js App Router and React for instant zero-latency view transitions",
-      "Designed with an accessible, high-contrast Sumi-ink and Chakra-orange visual system",
+      "Designed with an accessible, high-contrast dark theme and clean visual hierarchy",
       "Modular component hierarchy with full keyboard support, interactive scroll telemetry, and modal preview",
     ],
     image: "/projects/portfolio.svg",
@@ -89,5 +89,3 @@ export const projects: Project[] = [
     link: "https://github.com/agengwahid/porto-ageng",
   },
 ];
-
-

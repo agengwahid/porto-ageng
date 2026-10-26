@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative pt-24 pb-16 md:pt-36 md:pb-28 px-4 sm:px-6 border-b border-[#22222a] overflow-hidden">
-      {/* WARM CHAKRA FLAME LIGHTING */}
+      {/* AMBIENT WARM EMBER GLOW */}
       <div className="absolute top-1/4 right-0 w-[420px] sm:w-[560px] h-[420px] sm:h-[560px] bg-orange-600/[0.09] rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -42,7 +42,7 @@ export default function Hero() {
                 className="min-h-[48px] px-6 py-3.5 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 text-zinc-950 font-bold text-xs uppercase tracking-wider rounded-xl transition duration-200 shadow-[0_0_20px_rgba(249,115,22,0.25)] flex items-center justify-center gap-2"
               >
                 <span>Lihat Portfolio Proyek</span>
-                <span>⚔️</span>
+                <span>↓</span>
               </a>
 
               <a
@@ -52,7 +52,7 @@ export default function Hero() {
                 className="min-h-[48px] px-6 py-3.5 bg-[#131318] border border-orange-500/40 hover:border-orange-400 text-orange-300 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl transition duration-200 flex items-center justify-center gap-2"
               >
                 <span>Unduh Curriculum Vitae (PDF)</span>
-                <span>📜</span>
+                <span>📄</span>
               </a>
 
               <a
@@ -60,7 +60,7 @@ export default function Hero() {
                 className="min-h-[48px] px-5 py-3.5 bg-[#0d0d11] border border-[#22222a] hover:border-orange-500/60 text-zinc-300 hover:text-orange-300 font-bold text-xs uppercase tracking-wider rounded-xl transition duration-200 flex items-center justify-center gap-2"
               >
                 <span>Hubungi / Rekrut</span>
-                <span>⚡</span>
+                <span>✉️</span>
               </a>
             </div>
 
@@ -92,13 +92,13 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: REAL PHOTO WITH ETHEREAL KURAMA SPIRIT (5 COLS) */}
+          {/* RIGHT COLUMN: PROFESSIONAL AVATAR WITH AMBIENT BACKDROP (5 COLS) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end mt-4 lg:mt-0">
             <div className="relative w-full max-w-[320px] sm:max-w-[370px]">
-              {/* CHAKRA FLAME GLOW BEHIND AVATAR */}
+              {/* WARM EMBER GLOW BEHIND AVATAR */}
               <div className="absolute -inset-3 bg-gradient-to-r from-orange-600/25 via-amber-600/15 to-orange-600/25 rounded-3xl blur-2xl pointer-events-none" />
 
-              {/* SUMI INK FRAME WITH CORNER ACCENTS */}
+              {/* OBSIDIAN FRAME WITH CORNER ACCENTS */}
               <div className="relative rounded-2xl bg-[#0d0d11] border-2 border-orange-500/60 p-2.5 sm:p-3 shadow-[0_0_30px_rgba(249,115,22,0.2)]">
                 {/* CORNER BRACKETS */}
                 <div className="absolute -top-1.5 -left-1.5 w-4 h-4 border-t-2 border-l-2 border-orange-400" />
@@ -110,7 +110,7 @@ export default function Hero() {
                 <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-[#070709] border border-[#22222a]">
                   <Image
                     src="/images/shinobi-avatar.jpg"
-                    alt="Muhammad Ageng Zayem Wahid: Backend & Cloud Developer with Kurama Chakra Stand"
+                    alt="Muhammad Ageng Zayem Wahid - Backend & Cloud Developer"
                     fill
                     className="object-cover object-top transition-transform duration-500 hover:scale-105"
                     priority
@@ -122,7 +122,7 @@ export default function Hero() {
                 <div className="mt-3 px-3 py-2 rounded-lg bg-[#131318] border border-[#22222a] flex items-center justify-between text-[11px] font-mono text-zinc-300">
                   <span className="flex items-center gap-1.5">
                     <span className="w-2 h-2 rounded-full bg-orange-500 animate-ping" />
-                    <span className="text-orange-400 font-bold">KURAMA CHAKRA STAND</span>
+                    <span className="text-orange-400 font-bold">SOFTWARE ENGINEER</span>
                   </span>
                   <span className="text-amber-300 font-semibold">GCP · NODE · LARAVEL</span>
                 </div>
@@ -134,5 +134,3 @@ export default function Hero() {
     </section>
   );
 }
-
-

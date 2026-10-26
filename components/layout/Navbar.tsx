@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { label: "Skills", href: "#skills", code: "CODEX" },
-  { label: "Projects", href: "#projects", code: "MISSIONS" },
-  { label: "Experience", href: "#about", code: "CHRONICLES" },
-  { label: "Certifications", href: "#certificates", code: "MASTERY" },
-  { label: "Contact", href: "#contact", code: "HIRE" },
+  { label: "Skills", href: "#skills", code: "SKILLS" },
+  { label: "Projects", href: "#projects", code: "PROJECTS" },
+  { label: "Experience", href: "#about", code: "EXPERIENCE" },
+  { label: "Certifications", href: "#certificates", code: "CERTS" },
+  { label: "Contact", href: "#contact", code: "CONTACT" },
 ];
 
 export default function Navbar() {
@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-[#070709]/95 backdrop-blur-md border-b border-[#22222a] z-50 transition-colors">
-      {/* CHAKRA SCROLL PROGRESS BAR WITH GLOWING TRAVELING MARKER */}
+      {/* SCROLL PROGRESS BAR WITH GLOWING TRAVELING MARKER */}
       <div className="absolute top-0 left-0 w-full h-[3px] bg-[#131318] overflow-visible">
         <div
           className="relative h-full bg-gradient-to-r from-orange-500 via-amber-400 to-orange-500 transition-all duration-75"
@@ -45,7 +45,7 @@ export default function Navbar() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-        {/* SHINOBI BRAND */}
+        {/* BRAND LOGO */}
         <a
           href="#"
           className="group flex items-center gap-3 text-zinc-100 font-semibold tracking-tight hover:text-orange-400 transition"
@@ -90,7 +90,7 @@ export default function Navbar() {
             className="inline-flex items-center gap-2 px-4 py-2 text-xs font-mono font-semibold tracking-wider text-orange-300 bg-orange-950/40 border border-orange-500/50 hover:bg-orange-500 hover:text-zinc-950 rounded-lg transition duration-200 shadow-[0_0_14px_rgba(249,115,22,0.15)]"
           >
             <span>UNDUH RESUME</span>
-            <span className="text-xs">📜</span>
+            <span className="text-xs">📄</span>
           </a>
         </div>
 
@@ -113,7 +113,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* MOBILE HUD MENU FLYOUT */}
+      {/* MOBILE MENU FLYOUT */}
       {open && (
         <div className="lg:hidden border-t border-[#22222a] bg-[#0d0d11] px-5 py-6 flex flex-col gap-2">
           {links.map((link) => (
@@ -135,7 +135,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="min-h-[48px] flex items-center justify-center w-full py-3.5 text-sm font-mono font-semibold text-zinc-950 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-400 hover:to-amber-400 rounded-xl transition shadow-lg"
             >
-              Unduh Curriculum Vitae (PDF) 📜
+              Unduh Curriculum Vitae (PDF) 📄
             </a>
           </div>
         </div>
@@ -143,5 +143,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-

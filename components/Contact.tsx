@@ -4,11 +4,11 @@ import { useState } from "react";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
-  const [alias, setAlias] = useState("");
-  const [villageEmail, setVillageEmail] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [engagement, setEngagement] = useState("Full-Time Backend / Cloud Developer");
-  const [brief, setBrief] = useState("");
-  const [summonSuccess, setSummonSuccess] = useState(false);
+  const [message, setMessage] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const directEmail = "agngwahid123@gmail.com";
 
@@ -18,21 +18,21 @@ export default function Contact() {
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const handleSummonSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!villageEmail || !brief) return;
-    setSummonSuccess(true);
+    if (!email || !message) return;
+    setSubmitted(true);
     // Open email client with pre-filled content
-    const subject = encodeURIComponent(`[Hiring & Kolaborasi] ${engagement} - ${alias || "Recruiter / Partner"}`);
+    const subject = encodeURIComponent(`[Hiring & Kolaborasi] ${engagement} - ${name || "Recruiter / Partner"}`);
     const body = encodeURIComponent(
-      `Nama / Perusahaan: ${alias}\nEmail: ${villageEmail}\nTipe Kebutuhan: ${engagement}\n\nPesan / Detail Kebutuhan:\n${brief}`
+      `Nama / Perusahaan: ${name}\nEmail: ${email}\nTipe Kebutuhan: ${engagement}\n\nPesan / Detail Kebutuhan:\n${message}`
     );
     window.location.href = `mailto:${directEmail}?subject=${subject}&body=${body}`;
   };
 
   return (
     <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 border-b border-[#22222a] relative overflow-hidden">
-      {/* WARM AMBIENT CHAKRA GLOW */}
+      {/* AMBIENT WARM GLOW */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] sm:w-[580px] h-[450px] sm:h-[580px] bg-orange-600/[0.07] rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto relative z-10">
@@ -58,53 +58,53 @@ export default function Contact() {
             <div className="lg:col-span-7 space-y-6">
               <div className="flex items-center justify-between pb-3 border-b border-[#22222a]">
                 <span className="font-mono text-xs text-orange-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
-                  <span>📜</span>
+                  <span>✉️</span>
                   <span>FORMULIR PESAN & DISKUSI</span>
                 </span>
-                <span className="font-mono text-[11px] text-zinc-500">KUCHIYOSE_DISPATCH</span>
+                <span className="font-mono text-[11px] text-zinc-500">MESSAGE_GATEWAY</span>
               </div>
 
-              {summonSuccess ? (
+              {submitted ? (
                 <div className="p-6 rounded-xl bg-orange-950/30 border border-orange-500/60 text-center space-y-3">
-                  <div className="text-3xl">🥷 ⚡</div>
-                  <h3 className="text-lg font-bold text-white">Pesan Siap Ditransmisikan</h3>
+                  <div className="text-3xl">📨 ⚡</div>
+                  <h3 className="text-lg font-bold text-white">Pesan Siap Dikirimkan</h3>
                   <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed max-w-md mx-auto">
-                    Aplikasi email Anda akan terbuka dengan draf pesan otomatis untuk dikirimkan langsung ke Ageng Wahid.
+                    Aplikasi email Anda akan terbuka dengan draf pesan otomatis untuk dikirimkan langsung ke Muhammad Ageng Zayem Wahid.
                   </p>
                   <button
-                    onClick={() => setSummonSuccess(false)}
+                    onClick={() => setSubmitted(false)}
                     className="mt-2 min-h-[44px] px-4 py-2.5 rounded-xl bg-[#131318] border border-[#22222a] text-xs font-mono text-orange-400 hover:text-white"
                   >
                     Kirim Pesan Lainnya
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSummonSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="ninja-alias" className="block text-xs font-mono text-zinc-400 mb-1.5">
+                      <label htmlFor="contact-name" className="block text-xs font-mono text-zinc-400 mb-1.5">
                         NAMA LENGKAP / PERUSAHAAN
                       </label>
                       <input
-                        id="ninja-alias"
+                        id="contact-name"
                         type="text"
-                        value={alias}
-                        onChange={(e) => setAlias(e.target.value)}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         placeholder="Contoh: Tech Recruiter / HR Lead"
                         className="w-full min-h-[48px] px-4 py-2.5 rounded-xl bg-[#131318] border border-[#22222a] text-base sm:text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="return-village" className="block text-xs font-mono text-zinc-400 mb-1.5">
+                      <label htmlFor="contact-email" className="block text-xs font-mono text-zinc-400 mb-1.5">
                         ALAMAT EMAIL RESMI *
                       </label>
                       <input
-                        id="return-village"
+                        id="contact-email"
                         type="email"
                         required
-                        value={villageEmail}
-                        onChange={(e) => setVillageEmail(e.target.value)}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         placeholder="recruiter@company.com"
                         className="w-full min-h-[48px] px-4 py-2.5 rounded-xl bg-[#131318] border border-[#22222a] text-base sm:text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none"
                       />
@@ -129,15 +129,15 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="project-brief" className="block text-xs font-mono text-zinc-400 mb-1.5">
+                    <label htmlFor="contact-message" className="block text-xs font-mono text-zinc-400 mb-1.5">
                       DETAIL PESAN / DESKRIPSI KEBUTUHAN *
                     </label>
                     <textarea
-                      id="project-brief"
+                      id="contact-message"
                       required
                       rows={4}
-                      value={brief}
-                      onChange={(e) => setBrief(e.target.value)}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       placeholder="Jelaskan kebutuhan peran, tech stack, atau cakupan proyek yang ingin didiskusikan..."
                       className="w-full px-4 py-3 rounded-xl bg-[#131318] border border-[#22222a] text-base sm:text-sm text-white placeholder-zinc-600 focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:outline-none resize-none"
                     />
@@ -148,7 +148,7 @@ export default function Contact() {
                     className="w-full min-h-[48px] py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-zinc-950 font-mono font-bold text-xs uppercase tracking-widest hover:brightness-110 transition duration-150 shadow-[0_0_20px_rgba(249,115,22,0.25)] flex items-center justify-center gap-2"
                   >
                     <span>Kirim Pesan / Inisiasi Diskusi</span>
-                    <span>⚡</span>
+                    <span>✉️</span>
                   </button>
                 </form>
               )}
@@ -227,5 +227,3 @@ export default function Contact() {
     </section>
   );
 }
-
-

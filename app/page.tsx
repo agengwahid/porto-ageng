@@ -13,10 +13,10 @@ import SideNinjaScrollRails from "@/components/SideNinjaScrollRails";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#070709] text-zinc-100 flex flex-col selection:bg-orange-500/30 selection:text-orange-200 relative overflow-x-hidden">
-      {/* Dynamic Animated Kurama Chakra Background */}
+      {/* Dynamic Animated Ambient Background */}
       <KuramaBackground />
 
-      {/* Side Ninja Tool Scroll Rails (Shuriken Left, Kunai Right) */}
+      {/* Side Telemetry Scroll Rails */}
       <SideNinjaScrollRails />
 
       <Navbar />
