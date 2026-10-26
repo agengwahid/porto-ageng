@@ -13,7 +13,7 @@ export default function Certificates() {
   const [active, setActive] = useState("Semua");
   const [preview, setPreview] = useState<null | (typeof certificates)[number]>(null);
 
-  // Close modal on Escape key press (Antislop R-32 Keyboard Accessibility)
+  // Close modal on Escape key press (Keyboard Accessibility)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {

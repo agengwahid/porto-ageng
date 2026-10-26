@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative pt-24 pb-16 md:pt-36 md:pb-28 px-4 sm:px-6 border-b border-[#22222a] overflow-hidden">
-      {/* WARM CHAKRA FLAME LIGHTING (NO CYAN, NO BLUE SLOP) */}
+      {/* WARM CHAKRA FLAME LIGHTING */}
       <div className="absolute top-1/4 right-0 w-[420px] sm:w-[560px] h-[420px] sm:h-[560px] bg-orange-600/[0.09] rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">

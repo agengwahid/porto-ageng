@@ -43,7 +43,7 @@ body {
   background-position: 0 0;
 }
 
-/* Accessible Keyboard Focus Ring (Antislop R-32) */
+/* Accessible Keyboard Focus Ring */
 :focus-visible {
   outline: 2px solid var(--chakra-orange);
   outline-offset: 3px;
