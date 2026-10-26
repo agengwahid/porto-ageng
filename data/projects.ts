@@ -78,7 +78,7 @@ export const projects: Project[] = [
     period: "2025 · Personal Platform",
     role: "Frontend Architect",
     description:
-      "Constructed a cyber-shinobi developer portfolio combining authentic engineering achievements (GPA 3.91, GCP certification) with immersive Konoha HUD telemetry. Built with Next.js, React, and strict Antislop accessibility standards.",
+      "Constructed a cyber-shinobi developer portfolio combining authentic engineering achievements (GPA 3.91, GCP certification) with immersive Konoha HUD telemetry. Built with Next.js, React, and strict accessibility standards.",
     highlights: [
       "Built with Next.js App Router and React for instant zero-latency view transitions",
       "Designed with an accessible, high-contrast Sumi-ink and Chakra-orange visual system",

@@ -46,7 +46,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-[#181820] flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-zinc-400">
         <p>© {year} Muhammad Ageng Zayem Wahid. All rights reserved.</p>
-        <p>Built with Next.js &amp; Tailwind CSS · Designed with Antislop Principles</p>
+        <p>Built with Next.js &amp; Tailwind CSS</p>
       </div>
     </footer>
   );

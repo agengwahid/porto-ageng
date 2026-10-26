@@ -25,7 +25,7 @@ Website portofolio interaktif personal bertema *Shinobi Jonin* yang menyajikan r
 
 ## Fitur Utama & Visual Interface
 
-Portofolio ini menggabungkan identitas visual bertema Shinobi (*Sumi Ink* `#070709` dan aksen *Chakra Orange*) dengan standar performa web modern dan filter kualitas anti-slop:
+Portofolio ini menggabungkan identitas visual bertema Shinobi (*Sumi Ink* `#070709` dan aksen *Chakra Orange*) dengan standar performa web modern:
 
 1. **Kurama Chakra Background (HTML5 Canvas)**
    * Animasi kanvas dinamis yang menampilkan visual sembilan ekor chakra (*Nine-Tails Chakra*), tatapan mata rubah merah menyala, dan partikel bara api (*embers*) yang bergerak asinkron tanpa membebani GPU/CPU.
