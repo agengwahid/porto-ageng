@@ -43,7 +43,7 @@ export default function Certificates() {
         <div className="mb-10 sm:mb-12">
           <div className="flex items-center gap-2 font-mono text-xs text-orange-400 uppercase tracking-widest mb-3">
             <span>04</span>
-            <span>//</span>
+            <span>{"//"}</span>
             <span>SERTIFIKASI PROFESIONAL & KREDENSIAL RESMI</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">

@@ -12,7 +12,7 @@ export default function Projects() {
         <div className="mb-12 sm:mb-16">
           <div className="flex items-center gap-2 font-mono text-xs text-orange-400 uppercase tracking-widest mb-3">
             <span>02</span>
-            <span>//</span>
+            <span>{"//"}</span>
             <span>PORTFOLIO PROYEK & ARSITEKTUR SISTEM</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
