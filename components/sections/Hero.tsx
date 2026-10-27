@@ -32,7 +32,7 @@ export default function Hero() {
             </div>
 
             <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-zinc-300 leading-relaxed max-w-2xl font-sans">
-              Lulusan S1 Informatika Universitas Ahmad Dahlan dengan <strong className="text-orange-300 font-semibold">IPK 3.91/4.00 (lulus akselerasi 3.5 tahun)</strong> dan alumnus program <strong className="text-amber-300 font-semibold">Bangkit Academy Cloud Computing (Google, GoTo, Traveloka)</strong>. Berpengalaman 2 tahun sebagai <strong className="text-white font-semibold">Asisten Praktikum Lab Informatika</strong> membimbing 100+ mahasiswa. Menguasai arsitektur RESTful API (Node.js, Express, Laravel), database relasional, dan deployment cloud di Google Cloud Platform.
+              Lulusan S1 Informatika Universitas Ahmad Dahlan dengan <strong className="text-orange-300 font-semibold">IPK 3.91/4.00 (lulus akselerasi 3.5 tahun)</strong> dan alumnus <strong className="text-amber-300 font-semibold">Bangkit Academy Cloud Computing (Google, GoTo, Traveloka)</strong>. Saat ini aktif sebagai <strong className="text-emerald-400 font-semibold">Software Engineer Intern di PT Selamat Jaya Persada</strong>, serta berpengalaman sebagai <strong className="text-sky-300 font-semibold">Mentor di Global Solusi Edukasi (GSE)</strong> dan Asisten Lab Komputer selama 2 tahun. Menguasai arsitektur backend RESTful API (Laravel, Node.js, Express), database relasional, dan deployment di Google Cloud Platform.
             </p>
 
             {/* ACTION TRIGGERS (Mobile thumb-friendly layout) */}

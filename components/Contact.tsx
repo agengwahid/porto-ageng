@@ -40,7 +40,7 @@ export default function Contact() {
         <div className="mb-12 sm:mb-14 text-center max-w-2xl mx-auto">
           <div className="inline-flex items-center gap-2 font-mono text-xs text-orange-400 uppercase tracking-widest mb-3">
             <span>05</span>
-            <span>//</span>
+            <span>{"//"}</span>
             <span>HUBUNGI & DISKUSI PELUANG KERJA</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">

@@ -49,8 +49,8 @@ const skillPillars: SkillPillar[] = [
     code: "DEVOPS",
     icon: "🛠️",
     category: "VERSION CONTROL & TEAM LEADERSHIP",
-    description: "Alur kolaborasi version control Git, pengujian kontrak endpoint API melalui Postman, otomatisasi pipeline, dan pengalaman 2 tahun membimbing 100+ mahasiswa di laboratorium komputer.",
-    technologies: ["Git & GitHub", "Postman", "Alur CI/CD", "Asistensi Lab Praktikum", "Code Review", "Problem Solving & Kolaborasi"],
+    description: "Alur kolaborasi version control Git, pengujian endpoint API melalui Postman, serta pengalaman sebagai mentor teknologi di Global Solusi Edukasi (GSE) dan asisten lab komputer.",
+    technologies: ["Git & GitHub", "Postman", "Alur CI/CD", "Technical Mentoring (GSE)", "Asistensi Lab Praktikum", "Code Review & Problem Solving"],
     borderGlow: "hover:border-zinc-500/80 shadow-[0_0_15px_rgba(255,255,255,0.05)]",
     badgeBg: "bg-[#131318] border-[#22222a] text-zinc-300",
     accentColor: "text-zinc-300",
@@ -65,7 +65,7 @@ export default function Skills() {
         <div className="mb-12 sm:mb-16">
           <div className="flex items-center gap-2 font-mono text-xs text-orange-400 uppercase tracking-widest mb-3">
             <span>01</span>
-            <span>//</span>
+            <span>{"//"}</span>
             <span>KEAHLIAN TEKNIS & PILAR KOMPETENSI</span>
           </div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">

@@ -17,6 +17,8 @@ Website portofolio interaktif personal modern dan profesional yang menyajikan re
 
 ## Ringkasan Rekam Jejak
 
+* **Software Engineer Intern:** PT Selamat Jaya Persada (Bengkulu), fokus pada pengembangan perangkat lunak dan sistem web berbasis Laravel, pengelolaan basis data, dan modul backend.
+* **Coding & Technology Mentor:** Global Solusi Edukasi (GSE - D.I. Yogyakarta), mengajar dan membimbing siswa dalam dasar coding, teknologi, serta computational problem solving.
 * **Lulusan S1 Informatika (Akselerasi 3.5 Tahun):** Universitas Ahmad Dahlan (UAD) dengan IPK **3.91 / 4.00** (Predikat Cum Laude).
 * **Alumnus Bangkit Academy 2024:** Cohort Cloud Computing yang diselenggarakan oleh Google, GoTo, dan Traveloka.
 * **Pengalaman Asisten Laboratorium Komputer (2 Tahun):** Membimbing lebih dari 100 mahasiswa strata satu (S1) pada mata kuliah Logika Pemrograman, Algoritma Pemrograman, dan Sistem Operasi.
